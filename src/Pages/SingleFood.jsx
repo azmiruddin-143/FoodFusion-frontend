@@ -27,7 +27,7 @@ const SingleFood = () => {
                     <div className='space-y-2 my-1 '>
                         <h1 className='text-sm sm:text-md xl:text-lg'> Category: {category}</h1>
                         <h1 className='text-sm sm:text-md xl:text-lg'> Quantity: <span className='font-bold'>{quantity}</span></h1>
-                        <h1 className='text-sm sm:text-md xl:text-lg font-bold' > Owner Details:</h1>
+                        <h1 className='text-sm sm:text-md xl:text-lg font-bold' > Seller Details:</h1>
                         <h1 className='text-sm sm:text-md xl:text-lg' > Name: {userName}</h1>
                         <h1 className='text-sm sm:text-md xl:text-lg'> Email: {useremail}</h1>
                         <h1 className='text-sm sm:text-md xl:text-lg'> Total Purchase: <span className='font-bold'>{PurchaseCount}</span> </h1>

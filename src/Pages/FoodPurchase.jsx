@@ -21,9 +21,7 @@ const FoodPurchase = () => {
         const buyerEmail = from.buyerEmail.value
         const price = from.price.value
         const foodquantity = parseInt(from.foodquantity.value)
-        const userName = user?.displayName
-        const userEmail = user?.email
-        const purchaseObject = { productName, buyerName, buyerEmail, price, foodquantity, userName, purchaseId: _id, userEmail, buyingDate: Date.now() }
+        const purchaseObject = { productName, buyerName, buyerEmail, price, foodquantity, purchaseId: _id, seller:useremail, buyingDate: Date.now() }
 
 
         if (foodquantity > quantity) {
@@ -87,20 +85,19 @@ const FoodPurchase = () => {
                 </div>
 
 
-
                 <div className="form-control w-full">
                     <label className="label">
                         <span className="label-text">Buyer Name</span>
                     </label>
                     <input type="text"
-                        name='buyerName' value={userName} placeholder="Enter your product quantity" className="input input-bordered" required />
+                        name='buyerName' value={user?.displayName} placeholder="Enter your product quantity" className="input input-bordered" required />
                 </div>
 
                 <div className="form-control w-full">
                     <label className="label">
                         <span className="label-text">Buyer Email</span>
                     </label>
-                    <input type="email" value={useremail} name='buyerEmail' placeholder="Enter your product quantity" className="input input-bordered" required />
+                    <input type="email" value={user?.email} name='buyerEmail' placeholder="Enter your product quantity" className="input input-bordered" required />
 
 
                 </div>
