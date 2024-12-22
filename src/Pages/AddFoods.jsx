@@ -72,7 +72,7 @@ const AddFoods = () => {
                     <div className="form-control w-full">
 
                         <label className="label">
-                            <span className="label-text"> Product Name</span>
+                            <span className="label-text"> Food Name </span> 
                         </label>
                         <input type="text" name='productname' placeholder="Enter your productname" className="input input-bordered" required />
 
@@ -91,12 +91,12 @@ const AddFoods = () => {
                         </label>
                         <select name="category" placeholder="Select a Category" className="select select-bordered"  required>
                             <option value="" disabled selected>Select a Food Category</option>
-                            <option value="Football">Main Courses</option>
-                            <option value="Basketball">Desserts</option>
-                            <option value="Tennis">Beverages </option>
-                            <option value="Cricket">Non-Vegetarian</option>
-                            <option value="Hockey">Salads</option>
-                            <option value="Hockey">Snacks</option>
+                            <option value="Main Courses">Main Courses</option>
+                            <option value="Desserts">Desserts</option>
+                            <option value="Beverages">Beverages</option>
+                            <option value="Non-Vegetarian">Non-Vegetarian</option>
+                            <option value="Salads">Salads</option>
+                            <option value="Snacks">Snacks</option>
                         </select>
                     </div>
                     <div className="form-control w-full">

@@ -15,6 +15,7 @@ import AddFoods from './Pages/AddFoods';
 import Gellery from './Pages/Gellery';
 import AllFoods from './Pages/AllFoods';
 import SingleFood from './Pages/SingleFood';
+import FoodPurchase from './Pages/FoodPurchase';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,8 +30,14 @@ const router = createBrowserRouter([
         element: <AllFoods></AllFoods>
       },
       {
-        path:"/singlefood",
-        element: <SingleFood></SingleFood>
+        path:"/singlefood/:id",
+        element: <SingleFood></SingleFood>,
+        loader : ({params}) => fetch(`http://localhost:5000/singlefood/${params.id}`)
+      },
+      {
+        path:"/foodpurchase/:id",
+        element: <FoodPurchase></FoodPurchase>,
+        loader : ({params}) => fetch(`http://localhost:5000/foodpurchase/${params.id}`)
       },
       {
         path:"/gallery",
