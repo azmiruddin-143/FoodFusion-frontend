@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../Auth Provider/AuthProvider';
+import axios from 'axios';
 const AddFoods = () => {
     const { user } = useContext(AuthContext)
     const addFoodsForm = (e) => {
@@ -40,32 +41,25 @@ const AddFoods = () => {
             return;
         }
 
+         
+        axios.post('http://localhost:5000/foods',foodsObject)
+        .then(result => {
+            console.log(result.data);
+            if (result.data.insertedId) {
+                Swal.fire({
+                    title: "Post SuccessFull",
+                    text: "Successfully adding a food item",
+                    icon: "success"
+                });
 
+                from.reset()
+                from.category.value = "";
+                from.foodorigin.value ="";
 
-        fetch("http://localhost:5000/foods", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(foodsObject),
+            }
         })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.insertedId) {
-                    Swal.fire({
-                        title: "Post SuccessFull",
-                        text: "Successfully adding a food item",
-                        icon: "success"
-                    });
 
-                    from.reset()
-                    from.category.value = "";
-                    from.foodorigin.value ="";
-
-                }
-            })
-
+  
     }
 
 

@@ -13,6 +13,7 @@ import Register from './Pages/Register';
 import Home from './Pages/Home';
 import AddFoods from './Pages/AddFoods';
 import Gellery from './Pages/Gellery';
+import AllFoods from './Pages/AllFoods';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/allfoods",
-        element: <AddFoods></AddFoods>
+        element: <AllFoods></AllFoods>
       },
       {
         path:"/gallery",
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/addfood",
-        element: <AddFoods></AddFoods>
+        element:  <AddFoods></AddFoods>
       },
       {
         path:"/login",
