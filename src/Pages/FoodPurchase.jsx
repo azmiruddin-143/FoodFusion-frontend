@@ -1,45 +1,63 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Auth Provider/AuthProvider';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const FoodPurchase = () => {
 
-  const purchaseDetails = useLoaderData()
-  const { productName, image, category, _id, PurchaseCount, quantity, price, userName, useremail, foodorigin, description } = purchaseDetails
-  const {user} = useContext(AuthContext)
-  const PurchaseForm = (e) => {
-    e.preventDefault()
-    const from = e.target
-    const productName = from.productname.value
-    const buyerName = from.buyerName.value
-    const buyerEmail = from.buyerEmail.value
-    const price = from.price.value
-    const foodquantity = parseInt(from.foodquantity.value)
-    const userName = user?.displayName
-    const userEmail = user?.email
-    const foodsObject = {productName, buyerName,buyerEmail, price,foodquantity, userName, userEmail,  }
+    const purchaseDetails = useLoaderData()
+    const { productName, _id, PurchaseCount, quantity, price, userName, useremail, } = purchaseDetails
+    const { user } = useContext(AuthContext)
+    const [isAvailable, setIsAvailable] = useState(false);
+    
 
-     
-    axios.post('http://localhost:5000/foods',foodsObject)
-    .then(result => {
-        console.log(result.data);
-        if (result.data.insertedId) {
-            Swal.fire({
-                title: "Post SuccessFull",
-                text: "Successfully adding a food item",
-                icon: "success"
+    const PurchaseForm = (e) => {
+        e.preventDefault()
+        const from = e.target
+        const productName = from.productname.value
+        const buyerName = from.buyerName.value
+        const buyerEmail = from.buyerEmail.value
+        const price = from.price.value
+        const foodquantity = parseInt(from.foodquantity.value)
+        const userName = user?.displayName
+        const userEmail = user?.email
+        const purchaseObject = { productName, buyerName, buyerEmail, price, foodquantity, userName, purchaseId: _id, userEmail, buyingDate: Date.now() }
+
+
+        if (foodquantity > quantity) {
+            toast.error(`item is not available!`, {
+                autoClose: 3000,
             });
-
-            from.reset()
-            from.category.value = "";
-            from.foodorigin.value ="";
-
+            return
         }
-    })
 
 
-}
+        if (quantity === 0) {
+            setIsAvailable(true)
+            return
+        } else {
+            setIsAvailable(false)
+        }
+
+
+        axios.post('http://localhost:5000/purchase', purchaseObject)
+            .then(result => {
+                console.log(result.data);
+                if (result.data.insertedId) {
+                    Swal.fire({
+                        title: "Successful Order",
+                        icon: "success"
+                    });
+
+                    from.reset()
+
+                }
+            })
+
+
+    }
 
 
     return (
@@ -50,9 +68,9 @@ const FoodPurchase = () => {
                     <label className="label">
                         <span className="label-text"> Food Name </span>
                     </label>
-                    <input type="text" value={productName}  name='productname' placeholder="Enter your productname" className="input input-bordered" required />
+                    <input type="text" value={productName} name='productname' placeholder="Enter your productname" className="input input-bordered" required />
                 </div>
-                
+
                 <div className="form-control w-full">
                     <label className="label">
                         <span className="label-text">Price</span>
@@ -64,32 +82,35 @@ const FoodPurchase = () => {
                     <label className="label">
                         <span className="label-text">Food Quantity</span>
                     </label>
-                    <input type="number" name='foodquantity' placeholder="Enter your product quantity" className="input input-bordered" required />
+                    <input type="number"  name='foodquantity' placeholder="Enter your product quantity" className="input input-bordered" required />
+                    
                 </div>
 
 
-                
+
                 <div className="form-control w-full">
                     <label className="label">
                         <span className="label-text">Buyer Name</span>
                     </label>
                     <input type="text"
-                        name='buyerName' value={userName}  placeholder="Enter your product quantity" className="input input-bordered" required />
+                        name='buyerName' value={userName} placeholder="Enter your product quantity" className="input input-bordered" required />
                 </div>
 
                 <div className="form-control w-full">
                     <label className="label">
                         <span className="label-text">Buyer Email</span>
                     </label>
-                    <input type="buyerEmail" value={useremail} name='useremail' placeholder="Enter your product quantity" className="input input-bordered" required />
+                    <input type="email" value={useremail} name='buyerEmail' placeholder="Enter your product quantity" className="input input-bordered" required />
 
 
                 </div>
+
 
                 <div className='w-full'>
-                    <button className='bg-[#baf120] text-black font-bold w-full py-2 px-3 my-5 rounded-lg'>Purchase</button>
+                    <button  className={`${isAvailable ? 'bg-[#f1f1f1d5] text-[#c0bbbb] font-bold w-full py-2 px-3 my-5 rounded-lg' : 'bg-[#baf120]  text-black font-bold w-full py-2 px-3 my-5 rounded-lg'}`}>Purchase</button>
                 </div>
             </form>
+            
         </div>
     );
 };
