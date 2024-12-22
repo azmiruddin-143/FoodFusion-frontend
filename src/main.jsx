@@ -14,6 +14,7 @@ import Home from './Pages/Home';
 import AddFoods from './Pages/AddFoods';
 import Gellery from './Pages/Gellery';
 import AllFoods from './Pages/AllFoods';
+import SingleFood from './Pages/SingleFood';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path:"/allfoods",
         element: <AllFoods></AllFoods>
+      },
+      {
+        path:"/singlefood",
+        element: <SingleFood></SingleFood>
       },
       {
         path:"/gallery",

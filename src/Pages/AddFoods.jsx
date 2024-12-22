@@ -12,13 +12,13 @@ const AddFoods = () => {
         const productName = from.productname.value
         const image = from.image.value
         const category = from.category.value
-        const quantity = from.quantity.value
+        const quantity = parseInt(from.quantity.value)
         const price = from.price.value
         const userName = from.username.value
         const useremail = from.useremail.value
         const foodorigin = from.foodorigin.value
         const description = from.description.value
-        const foodsObject = {productName,image,category, quantity, price, userName, useremail, foodorigin, description, }
+        const foodsObject = {productName,image,category, quantity, price, userName, useremail, foodorigin, description, PurchaseCount : 0 }
 
 
         if (!image.includes('.png') && !image.includes('.jpg')) {
