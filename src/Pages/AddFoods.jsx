@@ -14,11 +14,11 @@ const AddFoods = () => {
         const category = from.category.value
         const quantity = parseInt(from.quantity.value)
         const price = from.price.value
-        const userName = from.username.value
-        const useremail = from.useremail.value
+        const sellerName = from.username.value
+        const sellerEmail = from.useremail.value
         const foodorigin = from.foodorigin.value
         const description = from.description.value
-        const foodsObject = {productName,image,category, quantity, price, userName, useremail, foodorigin, description, PurchaseCount : 0 }
+        const foodsObject = {productName,image,category, quantity, price, sellerName, sellerEmail, foodorigin, description, purchaseCount : 0 }
 
 
         if (!image.includes('.png') && !image.includes('.jpg')) {
@@ -115,7 +115,7 @@ const AddFoods = () => {
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">User Name</span>
+                            <span className="label-text">Seller Name</span>
                         </label>
                         <input type="text"
                             name='username' value={user?.displayName} placeholder="Enter your product quantity" className="input input-bordered" required />
@@ -124,7 +124,7 @@ const AddFoods = () => {
                 <div className='sm:flex gap-5'>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Email</span>
+                            <span className="label-text">Seller Email</span>
                         </label>
                         <input type="email" value={user?.email}  name='useremail' placeholder="Enter your product quantity" className="input input-bordered" required />
 

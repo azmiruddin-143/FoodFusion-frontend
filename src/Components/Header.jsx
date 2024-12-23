@@ -100,7 +100,7 @@ const Header = () => {
                         </div>
                         <div className='flex items-center gap-0 sm:gap-3'>
                             <img className={`${isBlurred ? 'sm:w-[60px] w-[40px] rounded-full' : "sm:w-[60px] w-[40px] bg-[#f5f3f3]  rounded-full"}`} src={sitelogo} alt="" />
-                            <h1 className={`${isBlurred && "text-white font-bold"} sm:text-3xl text-[12px] pl-2 lg:pl-0 lg:text-xl xl:text-3xl text-[#9dc923] font-bold`}> FoodFusion                    
+                            <h1 className={`${isBlurred && "text-white font-bold"} sm:text-3xl text-[12px] pl-2 lg:pl-0 lg:text-xl xl:text-3xl text-[#9dc923] font-bold`}> FoodFusion
                             </h1>
                         </div>
                     </div>
@@ -147,7 +147,7 @@ const Header = () => {
                                             : ""
                                     }
                                 >
-                                    Add Food 
+                                    Add Food
                                 </NavLink>
                             }
 
@@ -232,14 +232,38 @@ const Header = () => {
                                         <ul
                                             tabIndex={0}
                                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                                            <li>
-                                                <a className="justify-between">
-                                                    My Foods
-
-                                                </a>
-                                            </li>
-                                            <li><a>Add food</a></li>
-                                            <li><a>My Orders</a></li>
+                                          
+                                            <NavLink
+                                                to="/myfoods"
+                                                className={({ isActive }) =>
+                                                    isActive
+                                                        ? `${isBlurred ? "text-[white]  font-bold border-b border-[white]" : "text-[#73921d] border-b border-[#73921d] "}`
+                                                        : ""
+                                                }
+                                            >
+                                                My Foods
+                                            </NavLink>
+                                            <NavLink
+                                                to="/addfood"
+                                                className={({ isActive }) =>
+                                                    isActive
+                                                        ? `${isBlurred ? "text-[white]  font-bold border-b border-[white]" : "text-[#73921d] border-b border-[#73921d]"}`
+                                                        : ""
+                                                }
+                                            >
+                                                Add food
+                                            </NavLink>
+                                            <NavLink
+                                                to="/myorders"
+                                                className={({ isActive }) =>
+                                                    isActive
+                                                        ? `${isBlurred ? "text-[white]  font-bold border-b border-[white]" : "text-[#73921d] border-b border-[#73921d] "}`
+                                                        : ""
+                                                }
+                                            >
+                                                My Orders
+                                            </NavLink>
+                                           
                                         </ul>
                                     </div>
                                 }

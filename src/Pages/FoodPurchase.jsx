@@ -32,13 +32,7 @@ const FoodPurchase = () => {
         }
 
 
-        if (quantity === 0) {
-            setIsAvailable(true)
-            return
-        } else {
-            setIsAvailable(false)
-        }
-
+    
 
         axios.post('http://localhost:5000/purchase', purchaseObject)
             .then(result => {
@@ -104,7 +98,7 @@ const FoodPurchase = () => {
 
 
                 <div className='w-full'>
-                    <button  className={`${isAvailable ? 'bg-[#f1f1f1d5] text-[#c0bbbb] font-bold w-full py-2 px-3 my-5 rounded-lg' : 'bg-[#baf120]  text-black font-bold w-full py-2 px-3 my-5 rounded-lg'}`}>Purchase</button>
+                    <button  className={'bg-[#baf120] text-black font-bold w-full py-2 px-3 my-5 rounded-lg'}>Purchase</button>
                 </div>
             </form>
             

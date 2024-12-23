@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AllFoodsCard = ({food}) => {
-    const {productName,image,category, _id, PurchaseCount,quantity,price,userName,useremail,foodorigin,description} = food
+    const {productName,image,category, _id, purchaseCount,price,} = food
     return (
 
         <div class="max-w-sm mx-auto h-[450px]  bg-[#7f6d6d] p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
@@ -23,7 +23,7 @@ const AllFoodsCard = ({food}) => {
                     <span class="bg-green-100 text-green-700 px-2 py-1 text-sm rounded-full">{category}</span>
                 </div>
 
-                <span class="text-lg font-bold text-gray-800">Total Purchase: {PurchaseCount}</span>
+                <span class="text-lg font-bold text-gray-800">Total Purchase: {purchaseCount}</span>
                 <div class="flex justify-between items-center">
                     <span class="text-lg font-bold text-gray-800">${price}</span>
                     <Link to={`/singlefood/${_id}`} ><button class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2">
