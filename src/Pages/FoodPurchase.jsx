@@ -10,7 +10,7 @@ const FoodPurchase = () => {
     const purchaseDetails = useLoaderData()
     const { productName, _id, purchaseCount, image,category, quantity, price, userName, useremail, } = purchaseDetails
     const { user } = useContext(AuthContext)
-
+    
 
     const PurchaseForm = (e) => {
         e.preventDefault()

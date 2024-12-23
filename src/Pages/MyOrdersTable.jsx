@@ -1,10 +1,11 @@
+import axios from 'axios';
 import moment from 'moment/moment';
 import React from 'react';
 import { FaTrashAlt } from "react-icons/fa";
-const MyOrdersTable = ({ myOrder, index }) => {
-    const { productName, price, foodquantity, buyingDate, image, purchaseCount, category, buyerEmail } = myOrder
+const MyOrdersTable = ({ myOrder, index,foodDilet }) => {
+    const { productName, price, foodquantity, buyingDate, image, purchaseCount, _id, category, buyerEmail } = myOrder
+    const formattedDate = moment(buyingDate).format('MMMM Do YYYY, h:mm:ss a');
 
-    const formattedDate = moment(buyingDate).format('MMMM Do YYYY, h:mm:ss a'); 
     return (
         <tbody>
             <tr className='text-center'>
@@ -24,7 +25,7 @@ const MyOrdersTable = ({ myOrder, index }) => {
                 <td>{purchaseCount}</td>
                 <td>{formattedDate}</td>
                 <td>
-                    <button>
+                    <button onClick={() => foodDilet(_id)}>
                         <FaTrashAlt size={16} />
                     </button>
                 </td>
