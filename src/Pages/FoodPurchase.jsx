@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Auth Provider/AuthProvider';
@@ -8,10 +8,9 @@ import { toast } from 'react-toastify';
 const FoodPurchase = () => {
 
     const purchaseDetails = useLoaderData()
-    const { productName, _id, PurchaseCount, quantity, price, userName, useremail, } = purchaseDetails
+    const { productName, _id, purchaseCount, image,category, quantity, price, userName, useremail, } = purchaseDetails
     const { user } = useContext(AuthContext)
-    const [isAvailable, setIsAvailable] = useState(false);
-    
+
 
     const PurchaseForm = (e) => {
         e.preventDefault()
@@ -21,8 +20,7 @@ const FoodPurchase = () => {
         const buyerEmail = from.buyerEmail.value
         const price = from.price.value
         const foodquantity = parseInt(from.foodquantity.value)
-        const purchaseObject = { productName, buyerName, buyerEmail, price, foodquantity, purchaseId: _id, seller:useremail, buyingDate: Date.now() }
-
+        const purchaseObject = { productName, buyerName, buyerEmail,category, image, price,purchaseCount, foodquantity, purchaseId: _id, seller:useremail, buyingDate: Date.now() }
 
         if (foodquantity > quantity) {
             toast.error(`item is not available!`, {

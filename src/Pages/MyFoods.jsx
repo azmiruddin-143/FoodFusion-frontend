@@ -7,7 +7,6 @@ import MyFoodCard from './MyFoodCard';
 const MyFoods = () => {
     const { user } = useContext(AuthContext)
     const [myFoods, setMyFoods] = useState([])
-    console.log(myFoods);
     useEffect(() => {
         axios.get(`http://localhost:5000/foods/${user?.email}`)
             .then(result => {

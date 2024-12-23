@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const AllFoodsCard = ({food}) => {
     const {productName,image,category, _id, purchaseCount,price,} = food
     return (
