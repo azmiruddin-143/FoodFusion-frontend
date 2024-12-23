@@ -5,14 +5,21 @@ import AllFoodsCard from './AllFoodsCard';
 const AllFoods = () => {
 
     const [allFoods, setAllFoods] = useState([])
-    console.log(allFoods);
-
+    const [search, setSearch] = useState('')
+    const [filter, setFilter] = useState('')
+    const [sort, setSort] = useState('')
     useEffect(() => {
-        axios.get('http://localhost:5000/foods')
+        axios.get(`http://localhost:5000/all-foods?search=${search}&filter=${filter}&sort=${sort}`)
             .then(result => {
                 setAllFoods(result.data)
             })
-    }, [])
+    }, [search,filter,sort])
+
+    const reset = () =>{
+        setSearch('')
+        setFilter('')
+        setSort('')
+    }
 
 
     return (
@@ -39,9 +46,10 @@ const AllFoods = () => {
                         className='px-6 py-2 w-full text-gray-700 placeholder-gray-500 bg-white outline-none focus:placeholder-transparent'
                         type='text'
                         name='search'
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
                         placeholder='Enter Job Title'
                     />
-
 
                 </div>
             </div>
@@ -53,12 +61,18 @@ const AllFoods = () => {
                         <select
                             name='category'
                             id='category'
+                            value={filter}
+                            onChange={(e) => setFilter(e.target.value)}
                             className='border p-4 rounded-lg'
                         >
                             <option value=''>Filter By Category</option>
-                            <option value='Web Development'>Web Development</option>
-                            <option value='Graphics Design'>Graphics Design</option>
-                            <option value='Digital Marketing'>Digital Marketing</option>
+                            <option value="" disabled selected>Select a Food Category</option>
+                            <option value="Main Courses">Main Courses</option>
+                            <option value="Desserts">Desserts</option>
+                            <option value="Beverages">Beverages</option>
+                            <option value="Non-Vegetarian">Non-Vegetarian</option>
+                            <option value="Salads">Salads</option>
+                            <option value="Snacks">Snacks</option>
                         </select>
                     </div>
 
@@ -68,14 +82,16 @@ const AllFoods = () => {
                             name='category'
                             id='category'
                             className='border p-4 rounded-md'
+                            value={sort}
+                            onChange={(e) => setSort(e.target.value)}
                         >
-                            <option value=''>Sort By Deadline</option>
-                            <option value='dsc'>Descending Order</option>
-                            <option value='asc'>Ascending Order</option>
+                            <option value=''>Sort By Purchase</option>
+                            <option value='dsc'>Descending Purchase </option>
+                            <option value='asc'>Ascending Purchase </option>
                         </select>
                     </div>
 
-                    <button className='btn my-8'>Reset</button>
+                    <button onClick={reset} className='btn my-8'>Reset all Filters</button>
 
                 </div>
 

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Auth Provider/AuthProvider';
 import axios from 'axios';
@@ -10,7 +10,7 @@ const FoodPurchase = () => {
     const purchaseDetails = useLoaderData()
     const { productName, _id, purchaseCount, image,category, quantity, price, userName, useremail, } = purchaseDetails
     const { user } = useContext(AuthContext)
-    
+    const navigate = useNavigate()
 
     const PurchaseForm = (e) => {
         e.preventDefault()
@@ -40,8 +40,8 @@ const FoodPurchase = () => {
                         title: "Successful Order",
                         icon: "success"
                     });
-
                     from.reset()
+                    navigate('/myorders')
 
                 }
             })
