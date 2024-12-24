@@ -3,6 +3,7 @@ import Banner from '../Components/Banner';
 import TopSelling from '../Components/TopSelling';
 import ComboOffers from '../Components/ComboOffers';
 import TrendingItems from '../Components/TrendingItems';
+import FeaturedDiscounts from '../Components/FeaturedDiscounts';
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <TopSelling></TopSelling>
       <ComboOffers></ComboOffers>
       <TrendingItems></TrendingItems>
+      <FeaturedDiscounts></FeaturedDiscounts>
     </div>
 
   )

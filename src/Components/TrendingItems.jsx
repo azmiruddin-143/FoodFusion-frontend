@@ -10,15 +10,15 @@ import trending4 from '../../src/assets/trending-4.jpg'
 const TrendingItems = () => {
     return (
         <div className='md:my-28 text-center my-14'>
-            <div className=" lg:py-20 pb-10  mx-4 lg:mx-10 ">
+            <div className="lg:py-20 m-0 p-0">
                 <Swiper
                     modules={[Navigation, Autoplay]}
                     navigation={false}
                     loop={true}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
+                    // autoplay={{
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    // }}
                     spaceBetween={12}
                     slidesPerView={4}
 
@@ -40,42 +40,42 @@ const TrendingItems = () => {
 
                   
                     <SwiperSlide>
-                        <div className="rounded-lg">
+                        <div>
                             <img
                                 src={trending1}
-                                className="w-full h-full rounded-md object-cover mb-4"
+                                className="w-full h-full rounded-md object-cover"
                             />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="rounded-lg">
+                        <div>
                             <img
                                 src={trending2}
-                                className="w-full h-full rounded-md object-cover mb-4"
+                                className="w-full h-full rounded-md object-cover"
                             />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="rounded-lg ">
+                        <div>
                             <img
                                 src={trending3}
-                                className="w-full h-full rounded-md object-cover mb-4"
+                                className="w-full h-full rounded-md object-cover"
                             />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="rounded-lg">
+                        <div>
                             <img
                                 src={trending4}
-                                className="w-full h-full rounded-md object-cover mb-4"
+                                className="w-full h-full rounded-md object-cover"
                             />
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="rounded-lg">
+                        <div>
                             <img
                                 src={trending3}
-                                className="w-full h-full rounded-md object-cover mb-4"
+                                className="w-full h-full rounded-md object-cover"
                             />
                         </div>
                     </SwiperSlide>
