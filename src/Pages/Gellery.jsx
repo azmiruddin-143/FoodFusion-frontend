@@ -3,9 +3,16 @@ import React, { useState } from "react";
 import Lightbox from "yet-another-react-lightbox"; // লাইটবক্স ইমপোর্ট
 import "yet-another-react-lightbox/styles.css"; // লাইটবক্স স্টাইল ইমপোর্ট
 import gallerybanner from '../../src/assets/all-page-banner.jpg'
-import image from '../../src/assets/trending-1.jpg'
-import image2 from "../../src/assets/trending-2.jpg";
-import image3 from "../../src/assets/trending-3.jpg";
+import image from '../../src/assets/gallery-image-1.jpg'
+import image2 from "../../src/assets/gallery-image-2.jpg";
+import image3 from "../../src/assets/gallery-image-3.jpg";
+import image4 from "../../src/assets/gallery-image-4.jpg";
+import image5 from "../../src/assets/gallery-image-5.jpg";
+import image6 from "../../src/assets/gallery-image-6.jpg";
+import image7 from "../../src/assets/gallery-image-7.jpg";
+import image8 from "../../src/assets/gallery-image-8.jpg";
+import image9 from "../../src/assets/gallery-image-11.jpg";
+import image10 from "../../src/assets/gallery-image-10.jpg";
 
 
 const Gellery = () => {
@@ -31,15 +38,15 @@ const Gellery = () => {
             </div>
 
 
-            <div className="gallery-page text-center my-6">
+            <div className="gallery-page text-center mx-28 my-6">
 
                 {/* গ্যালারি সেকশন */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
                     {/* ইমেজ ১ */}
                     <img
                         src={image}
                         alt="Gallery Image 1"
-                        className="rounded-lg cursor-pointer"
+                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(0);
                             setOpen(true);
@@ -50,7 +57,7 @@ const Gellery = () => {
                     <img
                         src={image2}
                         alt="Gallery Image 2"
-                        className="rounded-lg cursor-pointer"
+                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(1);
                             setOpen(true);
@@ -59,9 +66,9 @@ const Gellery = () => {
 
                     {/* ইমেজ ৩ */}
                     <img
-                        src={image3}
+                        src={image9}
                         alt="Gallery Image 3"
-                        className="rounded-lg cursor-pointer"
+                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(2);
                             setOpen(true);
@@ -70,9 +77,9 @@ const Gellery = () => {
 
                     {/* ইমেজ ৪ */}
                     <img
-                        src={image}
+                        src={image4}
                         alt="Gallery Image 4"
-                        className="rounded-lg cursor-pointer"
+                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(3);
                             setOpen(true);
@@ -81,9 +88,9 @@ const Gellery = () => {
 
                     {/* ইমেজ ৫ */}
                     <img
-                        src={image2}
+                        src={image3}
                         alt="Gallery Image 5"
-                        className="rounded-lg cursor-pointer"
+                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(4);
                             setOpen(true);
@@ -92,9 +99,9 @@ const Gellery = () => {
 
                     {/* ইমেজ ৬ */}
                     <img
-                        src={image}
+                        src={image6}
                         alt="Gallery Image 6"
-                        className="rounded-lg cursor-pointer"
+                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(5);
                             setOpen(true);
@@ -103,9 +110,9 @@ const Gellery = () => {
 
                     {/* ইমেজ ৭ */}
                     <img
-                        src={image}
+                        src={image7}
                         alt="Gallery Image 7"
-                        className="rounded-lg cursor-pointer"
+                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(6);
                             setOpen(true);
@@ -114,9 +121,9 @@ const Gellery = () => {
 
                     {/* ইমেজ ৮ */}
                     <img
-                        src={image3}
+                        src={image4}
                         alt="Gallery Image 8"
-                        className="rounded-lg cursor-pointer"
+                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(7);
                             setOpen(true);
@@ -125,9 +132,9 @@ const Gellery = () => {
 
                     {/* ইমেজ ৯ */}
                     <img
-                        src={image}
-                        alt="Gallery Image 9"
-                        className="rounded-lg cursor-pointer"
+                        src={image5}
+                        alt="Gallery Image 8"
+                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(8);
                             setOpen(true);
@@ -136,9 +143,9 @@ const Gellery = () => {
 
                     {/* ইমেজ ১০ */}
                     <img
-                        src={image2}
-                        alt="Gallery Image 10"
-                        className="rounded-lg cursor-pointer"
+                        src={image10}
+                        alt="Gallery Image 8"
+                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(9);
                             setOpen(true);
@@ -154,6 +161,13 @@ const Gellery = () => {
                         { src: image },
                         { src: image2 },
                         { src: image3 },
+                        { src: image4 },
+                        { src: image5 },
+                        { src: image6 },
+                        { src: image7 },
+                        { src: image8 },
+                        { src: image9 },
+                        { src: image10 },
 
                     ]} // ইমেজের তালিকা
                     index={currentIndex} // ক্লিক করা ইমেজের ইনডেক্স

@@ -98,7 +98,7 @@ const MyOrders = () => {
                         <div className="flex justify-center my-5">
                             <div>
                                 <h1 className='text-4xl py-3'>No Data Found ?</h1>
-                                <Link to={'/allfoods'} > <button className='py-2 my-3 px-6 bg-[#9dc923] rounded-md'>Purchase Food</button> </Link>
+                                <Link to={'/allfoods'} > <button className='py-2 my-3 px-6 bg-primary text-white rounded-md'>Purchase Food</button> </Link>
                             </div>
                         </div>
                     }

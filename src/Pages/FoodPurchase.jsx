@@ -117,7 +117,7 @@ const FoodPurchase = () => {
 
 
                     <div className='w-full'>
-                        <button className={'bg-[#baf120] text-black font-bold w-full py-2 px-3 my-5 rounded-lg'}>Purchase</button>
+                        <button className={'bg-primary text-white font-bold w-full py-2 px-3 my-5 rounded-lg'}>Purchase</button>
                     </div>
                 </form>
 

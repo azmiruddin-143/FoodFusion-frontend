@@ -54,10 +54,10 @@ const MyFoodCard = ({ myfood, updateFoodList }) => {
             <div class="relative">
                 <img
                     src={image}
-                    class="w-full h-48 object-cover"
+                    class=" w-[400px] h-64 object-cover"
                 />
                 <div class="absolute top-2 right-2 bg-white rounded-full p-1 shadow">
-                    <img className='w-8 rounded-full' src={user?.photoURL} alt="" />
+                    <img className='w-8 rounded-full ' src={user?.photoURL} alt="" />
                 </div>
             </div>
             <div class="p-4">
@@ -74,7 +74,7 @@ const MyFoodCard = ({ myfood, updateFoodList }) => {
                 <div class="flex justify-between items-center">
                     <span class="text-lg font-bold">${price}</span>
                     <Link >
-                        <button onClick={handleModalOpen} class="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">
+                        <button onClick={handleModalOpen} class="bg-secondary text-black font-bold px-4 py-2 rounded-lg ">
                             Update
                         </button>
                     </Link>
@@ -189,7 +189,7 @@ const MyFoodCard = ({ myfood, updateFoodList }) => {
 
                                 {/* ... */}
                                 <div className="modal-action">
-                                    <button type="submit" className="btn btn-success">
+                                    <button type="submit" className="btn bg-primary text-white">
                                         Update
                                     </button>
                                 </div>

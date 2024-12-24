@@ -17,7 +17,7 @@ const TopSelling = () => {
             <p className='text-center mx-auto mt-3 w-4/12'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus delectus expedita repudiandae?</p>
             <div className='sm:my-16 my-5'>
                
-                    <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 place-items-center sm:gap-y-5 lg:gap-y-12 lg:mx-5 2xl:mx-32 xl:mx-52'>
+                    <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 place-items-center sm:gap-y-5 lg:gap-y-12 lg:mx-5 2xl:mx-52 xl:mx-52'>
                         {
                            topSelling.map(topSelling => <TopSellingCard key={topSelling._id} topSelling={topSelling} ></TopSellingCard>)
                         }

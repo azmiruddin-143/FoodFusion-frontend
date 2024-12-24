@@ -5,8 +5,10 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../Auth Provider/AuthProvider';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const AddFoods = () => {
     const { user } = useContext(AuthContext)
+    const navigate = useNavigate()
     const addFoodsForm = (e) => {
         e.preventDefault()
         const from = e.target
@@ -56,7 +58,7 @@ const AddFoods = () => {
                 from.reset()
                 from.category.value = "";
                 from.foodorigin.value ="";
-
+                navigate("/allfoods")
             }
         })
 
@@ -177,7 +179,7 @@ const AddFoods = () => {
                 </div>
 
                 <div className='w-full'>
-                    <button className='bg-[#baf120] text-black font-bold w-full py-2 px-3 my-5 rounded-lg'>Add Item</button>
+                    <button className='bg-primary dark:bg-[#6d1919] text-white font-bold w-full py-2 px-3 my-5 rounded-lg'>Add Item</button>
                 </div>
             </form>
         </div>

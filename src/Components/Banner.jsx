@@ -8,6 +8,7 @@ import "swiper/css/pagination"; // পেজিনেশন স্টাইল �
 import banner from '../../src/assets/banner-test.jpg';
 import slider from '../../src/assets/slider-1.jpg';
 import slider2 from '../../src/assets/slider-2.jpg';
+import slider3 from '../../src/assets/slider-3.jpg';
 import { Link } from "react-router-dom";
 
 const Banner = () => {
@@ -51,7 +52,7 @@ const Banner = () => {
                                 and nutrition in every bite.
                             </p>
                             <Link to={"/allfoods"} className="border-b border-secondary py-4">
-                                <button className="bg-secondary text-black  font-bold py-2 px-6 mt-6 ">Shop now</button>
+                                <button className="bg-secondary text-black  font-bold py-2 px-6 mt-6 ">Purchase menu</button>
                             </Link>
                         </div>
                     </div>
@@ -76,7 +77,28 @@ const Banner = () => {
                                 anytime, anywhere
                             </p>
                             <Link to={"/allfoods"} className="border-b border-secondary py-4">
-                                <button className="bg-secondary text-black  font-bold py-2 px-6 mt-6 ">Shop now</button>
+                                <button className="bg-secondary text-black  font-bold py-2 px-6 mt-6 ">Purchase menu</button>
+                            </Link>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div
+                        style={{
+                            backgroundImage: `url(${slider3})`,backgroundColor: "#00000087",
+                            backgroundBlendMode: "multiply"
+                        }}
+                        className="bg-cover bg-no-repeat bg-center w-full h-full flex justify-start items-center"
+                    >
+                        <div className="ml-36 space-y-4">
+                            <h1 className="text-6xl w-7/12 text-white font-bold">
+                            Discover the Best Burgers
+                            </h1>
+                            <p className="w-7/12 text-white font-bold">
+                            Savor the ultimate taste experience with our burgers, crafted using fresh, high-quality ingredients to deliver flavor and satisfaction in every bite
+                            </p>
+                            <Link to={"/allfoods"} className="border-b border-secondary py-4">
+                                <button className="bg-secondary text-black  font-bold py-2 px-6 mt-6 ">Purchase menu</button>
                             </Link>
                         </div>
                     </div>

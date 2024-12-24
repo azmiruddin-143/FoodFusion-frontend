@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import AllFoodsCard from './AllFoodsCard';
 import pagebanner from '../../src/assets/gellary-pager-banner.jpg'
+import { FaSearchengin } from "react-icons/fa6";
 
 const AllFoods = () => {
 
@@ -28,7 +29,7 @@ const AllFoods = () => {
             <div
                 style={{
                     backgroundImage: `url(${pagebanner})`, backgroundColor: "#00000087",
-                    backgroundBlendMode: "multiply", backgroundSize: "cover", backgroundPosition:"center", backgroundRepeat: "no-repeat"
+                    backgroundBlendMode: "multiply", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"
                 }}
                 class="relative bg-gray-50 h-36 lg:h-52  flex items-center justify-center">
 
@@ -47,23 +48,26 @@ const AllFoods = () => {
 
             <div className='flex flex-col my-16  md:flex-row justify-center items-center gap-5 '>
 
-                <div className='w-3/12 overflow-hidden border rounded-lg  focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300'>
+                <div className='flex p-1 overflow-hidden border rounded-lg focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300'>
                     <input
-                        className='px-6 py-2 w-full text-gray-700 placeholder-gray-500 bg-white outline-none focus:placeholder-transparent'
+                        className='px-6 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none focus:placeholder-transparent'
                         type='text'
                         name='search'
+                        placeholder='Enter Foods'
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        placeholder='Enter Job Title'
                     />
 
+                    <button className='px-1 md:px-4 py-3 text-sm font-medium tracking-wider uppercase transition-colors duration-300 transform '>
+                        <FaSearchengin size={25} />
+                    </button>
                 </div>
             </div>
 
-            <div className='flex items-start gap-4 justify-center'>
+            <div className='flex items-start gap-4 mx-10 justify-center'>
 
-                <div className=''>
-                    <div className='my-8' >
+                <div className='sticky top-24 shadow-lg  p-5'>
+                    <div className='mb-8' >
                         <select
                             name='category'
                             id='category'
@@ -101,16 +105,22 @@ const AllFoods = () => {
 
                 </div>
 
-                <div>
+                {
+                    allFoods.length === 0 ?
+                        <h1 className=' text-5xl mx-auto text-primary pr-52'>No Data Found ?</h1>
+                        :
+                        <div>
 
-                    <div className=' sm:grid-cols-2 gap-8 mt-8 mx-auto grid xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 '>
+                            <div className=' sm:grid-cols-2 gap-y-24 gap-8 my-16 mx-auto grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-1 '>
 
-                        {
-                            allFoods.map(food => <AllFoodsCard key={food._id} food={food} ></AllFoodsCard>)
-                        }
+                                {
+                                    allFoods.map(food => <AllFoodsCard key={food._id} food={food} ></AllFoodsCard>)
+                                }
 
-                    </div>
-                </div>
+                            </div>
+                        </div>
+                }
+
             </div>
 
 

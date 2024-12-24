@@ -65,7 +65,7 @@ const SingleFood = () => {
                                 <p class="text-lg font-semibold my-0 text-gray-800">
                                     ${price}
                                 </p>
-                                <p class="text-sm text-gray-600 ">{description}</p>
+                                <p class="text-md text-gray-600 ">Description: {description}</p>
                                 <div className='space-y-2 my-1 '>
                                     <h1 className='text-sm sm:text-md xl:text-lg'> Category: {category}</h1>
                                     <h1 className='text-sm sm:text-md xl:text-lg'> Food Origin: {foodorigin}</h1>
@@ -80,7 +80,7 @@ const SingleFood = () => {
 
                                 {quantity === 0 && <h1 className='text-red-600'>Not Abilebel quantity</h1>}
                                 <button disabled={quantity === 0}
-                                    class={`${quantity === 0 ? "bg-[#dddada] text-[#a4a3a3] mt-4 w-5/12 font-semibold py-2 px-4 rounded-md" : 'mt-4 w-5/12 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md'}`}
+                                    class={`${quantity === 0 ? "bg-[#dddada] text-[#a4a3a3] mt-4 w-5/12 font-semibold py-2 px-4 rounded-md" : 'mt-4 w-5/12 bg-primary  text-white font-semibold py-2 px-4 rounded-md'}`}
                                 >
                                     Purchase
                                 </button>
