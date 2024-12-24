@@ -36,7 +36,8 @@ const Banner = () => {
                 <SwiperSlide>
                     <div
                         style={{
-                            backgroundImage: `url(${slider})`,
+                            backgroundImage: `url(${slider})`, backgroundColor: "#00000087",
+                            backgroundBlendMode: "multiply"
                         }}
                         className="bg-cover bg-no-repeat bg-center w-full h-full flex justify-start items-center"
                     >
@@ -44,13 +45,13 @@ const Banner = () => {
                             <h1 className="text-6xl w-7/12 text-white font-bold">
                                 Discover the Taste of Freshness
                             </h1>
-                            <p className="w-7/12 ">
+                            <p className="w-7/12 text-white font-bold">
                                 Savor the best collection of organic and fresh foods delivered
                                 straight to your doorstep. Experience the perfect blend of taste
                                 and nutrition in every bite.
                             </p>
-                            <Link to={"/allfoods"}>
-                                <button className="bg-[white] py-2 px-4 ">Shop now</button>
+                            <Link to={"/allfoods"} className="border-b border-secondary py-4">
+                                <button className="bg-secondary text-black  font-bold py-2 px-6 mt-6 ">Shop now</button>
                             </Link>
                         </div>
                     </div>
@@ -60,20 +61,23 @@ const Banner = () => {
                 <SwiperSlide>
                     <div
                         style={{
-                            backgroundImage: `url(${slider2})`,
+                            backgroundImage: `url(${slider2})`,backgroundColor: "#00000087",
+                            backgroundBlendMode: "multiply"
                         }}
                         className="bg-cover bg-no-repeat bg-center w-full h-full flex justify-start items-center"
                     >
                         <div className="ml-36 space-y-4">
-                            <h1 className="text-6xl w-7/12 text-red-800">
+                            <h1 className="text-6xl w-7/12 text-white font-bold">
                                 Favorite Meals, Delivered Fast
                             </h1>
-                            <p className="w-7/12">
+                            <p className="w-7/12 text-white font-bold">
                                 Choose from a variety of delicious dishes and snacks prepared with
                                 care and quality ingredients. Indulge in the flavors you love
                                 anytime, anywhere
                             </p>
-                            <button className="bg-[white] py-2 px-4">Shop now 2</button>
+                            <Link to={"/allfoods"} className="border-b border-secondary py-4">
+                                <button className="bg-secondary text-black  font-bold py-2 px-6 mt-6 ">Shop now</button>
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>

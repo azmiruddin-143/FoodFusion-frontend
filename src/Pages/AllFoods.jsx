@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import AllFoodsCard from './AllFoodsCard';
+import pagebanner from '../../src/assets/gellary-pager-banner.jpg'
 
 const AllFoods = () => {
 
@@ -13,9 +14,9 @@ const AllFoods = () => {
             .then(result => {
                 setAllFoods(result.data)
             })
-    }, [search,filter,sort])
+    }, [search, filter, sort])
 
-    const reset = () =>{
+    const reset = () => {
         setSearch('')
         setFilter('')
         setSort('')
@@ -24,7 +25,12 @@ const AllFoods = () => {
 
     return (
         <div>
-            <div class="relative bg-gray-50 h-36 lg:h-52  flex items-center justify-center">
+            <div
+                style={{
+                    backgroundImage: `url(${pagebanner})`, backgroundColor: "#00000087",
+                    backgroundBlendMode: "multiply", backgroundSize: "cover", backgroundPosition:"center", backgroundRepeat: "no-repeat"
+                }}
+                class="relative bg-gray-50 h-36 lg:h-52  flex items-center justify-center">
 
                 <h1 class="absolute inset-0 text-gray-200 sm:text-6xl lg:text-9xl font-bold flex items-center justify-center select-none">
                     All Foods

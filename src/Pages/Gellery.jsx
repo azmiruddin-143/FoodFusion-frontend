@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Lightbox from "yet-another-react-lightbox"; // লাইটবক্স ইমপোর্ট
 import "yet-another-react-lightbox/styles.css"; // লাইটবক্স স্টাইল ইমপোর্ট
+import gallerybanner from '../../src/assets/all-page-banner.jpg'
 import image from '../../src/assets/trending-1.jpg'
 import image2 from "../../src/assets/trending-2.jpg";
 import image3 from "../../src/assets/trending-3.jpg";
@@ -12,22 +13,26 @@ const Gellery = () => {
     const [currentIndex, setCurrentIndex] = useState(0); // ক্লিক করা ইমেজ ইনডেক্স
     return (
         <div>
-            <div class="relative bg-gray-50 h-36 lg:h-52  flex items-center justify-center">
+            <div style={{
+                backgroundImage: `url(${gallerybanner})`, backgroundColor: "#00000087",
+                backgroundBlendMode: "multiply", backgroundSize: "cover", backgroundPosition:"center", backgroundRepeat: "no-repeat"
+            }}
 
+                class="relative  h-36 lg:h-52  flex items-center justify-center">
                 <h1 class="absolute inset-0 text-gray-200 sm:text-6xl lg:text-9xl font-bold flex items-center justify-center select-none">
                     Gallery
                 </h1>
 
                 <div class="relative bg-white p-3 lg:p-6 rounded-lg shadow-lg z-10">
                     <h1 class="lg:text-4xl sm:text-2xl font-bold text-primary text-center">
-                    Gallery
+                        Gallery
                     </h1>
                 </div>
             </div>
 
 
             <div className="gallery-page text-center my-6">
-    
+
                 {/* গ্যালারি সেকশন */}
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-4">
                     {/* ইমেজ ১ */}
