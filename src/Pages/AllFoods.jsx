@@ -24,14 +24,14 @@ const AllFoods = () => {
 
     return (
         <div>
-            <div class="relative bg-gray-50 h-52  flex items-center justify-center">
+            <div class="relative bg-gray-50 h-36 lg:h-52  flex items-center justify-center">
 
-                <h1 class="absolute inset-0 text-gray-200 text-9xl font-bold flex items-center justify-center select-none">
+                <h1 class="absolute inset-0 text-gray-200 sm:text-6xl lg:text-9xl font-bold flex items-center justify-center select-none">
                     All Foods
                 </h1>
 
-                <div class="relative bg-white p-6 rounded-lg shadow-lg z-10">
-                    <h1 class="text-4xl font-bold text-red-500 text-center">
+                <div class="relative bg-white p-3 lg:p-6 rounded-lg shadow-lg z-10">
+                    <h1 class="lg:text-4xl sm:text-2xl font-bold text-primary text-center">
                         All Foods
                     </h1>
                 </div>

@@ -3,3 +3,32 @@
 @tailwind utilities;
 
 
+/* Custom bullets */
+.custom-bullet {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(85, 186, 13);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: red !important;
+  }
+  
+  .swiper-pagination-bullet-active.custom-bullet {
+    color: #e6c9a2; 
+    transform: scale(1.2); 
+    border-bottom: 2px;
+  }
+
+   /* .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 8px);
+    top: var(--swiper-pagination-top, auto);
+    left: 100px !important;
+    top: 600px !important;
+    width: 50px !important;
+} */

@@ -15,10 +15,10 @@ const TrendingItems = () => {
                     modules={[Navigation, Autoplay]}
                     navigation={false}
                     loop={true}
-                    // autoplay={{
-                    //     delay: 3000,
-                    //     disableOnInteraction: false,
-                    // }}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
                     spaceBetween={12}
                     slidesPerView={4}
 
