@@ -4,7 +4,7 @@ import parsent from '../../src/assets/parsent-discount.png'
 import barger from '../../src/assets/barger-discount.png'
 const FeaturedDiscounts = () => {
     return (
-        <div className="grid gap-6 px-4 py-8 mx-24 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 px-4 py-8 mx-28 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {/* Card 1 */}
         <div className=" bg-primary  text-white py-10 px-5 rounded-lg shadow-md relative">
           <div className="absolute top-4 right-4">

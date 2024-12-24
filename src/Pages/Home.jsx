@@ -4,6 +4,7 @@ import TopSelling from '../Components/TopSelling';
 import ComboOffers from '../Components/ComboOffers';
 import TrendingItems from '../Components/TrendingItems';
 import FeaturedDiscounts from '../Components/FeaturedDiscounts';
+import FoodsPerformance from '../Components/FoodsPerformance';
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
       <ComboOffers></ComboOffers>
       <TrendingItems></TrendingItems>
       <FeaturedDiscounts></FeaturedDiscounts>
+      <FoodsPerformance></FoodsPerformance>
     </div>
 
   )
