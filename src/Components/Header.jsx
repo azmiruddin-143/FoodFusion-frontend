@@ -1,14 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link, NavLink, Route, Routes, useNavigate } from 'react-router-dom';
 import { IoIosCloseCircle } from "react-icons/io";
-import sitelogo from '../../src/assets/site-logo.png'
+import sitelogo from '../../src/assets/foods-logo.png'
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../Auth Provider/AuthProvider';
+import ToggleTeme from './ToggleTeme';
 
-
+ 
 const Header = () => {
     // old header//
     const { user, userLogout } = useContext(AuthContext);
@@ -50,7 +51,7 @@ const Header = () => {
 
     return (
         <div
-            className={`sticky top-0 w-full z-40 transition-all duration-300 ${isBlurred ? "bg-[#9dc92395] backdrop-blur-md " : "bg-base-200"
+            className={`sticky top-0 w-full z-40 transition-all duration-300 ${isBlurred ? "bg-[#07060995] backdrop-blur-md " : "bg-primary"
                 }`}
         >
             <div className="2xl:mx-32 xl:mx-24 sm:mx-4 ">
@@ -65,7 +66,7 @@ const Header = () => {
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className={`${isBlurred && "text-white"} sm:h-8 sm:w-8 h-6 w-6`}
+                                    className={`${isBlurred && "text-white"} text-white sm:h-8 sm:w-8 h-6 w-6`}
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -84,34 +85,32 @@ const Header = () => {
                                     className="menu menu-sm dropdown-content gap-4 bg-base-100 rounded-box z-[1] mt-3 w-44 sm:w-52 py-6 px-2 shadow"
                                 >
                                     <button onClick={() => setIsDropdownOpen(false)}>
-                                        <IoIosCloseCircle className="absolute text-[#9dc923] right-0 top-0" size={30} />
+                                        <IoIosCloseCircle className="absolute text-secondary right-0 top-0" size={30} />
                                     </button>
                                     <NavLink to="/" onClick={() => setIsDropdownOpen(false)}>Home</NavLink>
-                                    <NavLink to="/allSportsEquipment" onClick={() => setIsDropdownOpen(false)}>All Sports Equipment</NavLink>
+                                    <NavLink to="/allfoods" onClick={() => setIsDropdownOpen(false)}>All Foods</NavLink>
                                     {
-                                        user && <NavLink to="/addEquipment" onClick={() => setIsDropdownOpen(false)}>Add Equipment</NavLink>
+                                        user && <NavLink to="/gallery" onClick={() => setIsDropdownOpen(false)}>Gallery</NavLink>
                                     }
-                                    {
-                                        user && <NavLink to="/myEquipmentList" onClick={() => setIsDropdownOpen(false)}>My Equipment List</NavLink>
-                                    }
+                                    
 
                                 </ul>
                             )}
                         </div>
                         <div className='flex items-center gap-0 sm:gap-3'>
-                            <img className={`${isBlurred ? 'sm:w-[60px] w-[40px] rounded-full' : "sm:w-[60px] w-[40px] bg-[#f5f3f3]  rounded-full"}`} src={sitelogo} alt="" />
-                            <h1 className={`${isBlurred && "text-white font-bold"} sm:text-3xl text-[12px] pl-2 lg:pl-0 lg:text-xl xl:text-3xl text-[#9dc923] font-bold`}> FoodFusion
+                            <img className={`${isBlurred ? 'sm:w-[60px] w-[40px] rounded-full' : "sm:w-[60px] w-[40px] rounded-full"}`} src={sitelogo} alt="" />
+                            <h1 className={`${isBlurred && "text-white font-bold"} sm:text-3xl text-[12px] pl-2 lg:pl-0 lg:text-xl xl:text-3xl text-secondary font-bold`}> FoodFusion
                             </h1>
                         </div>
                     </div>
 
                     <div className="navbar-center  xl:ml-10 2xl:ml-0 hidden lg:flex">
-                        <ul className={`${isBlurred ? "xl:text-lg text-md text-black flex gap-3 sm:gap-6 xl:gap-8" : "xl:text-lg text-md dark:text-black  flex gap-3 sm:gap-6 xl:gap-8"}`}>
+                        <ul className={`${isBlurred ? "xl:text-lg text-md text-white flex gap-3 sm:gap-6 xl:gap-8" : "xl:text-lg text-md text-white  flex gap-3 sm:gap-6 xl:gap-8"}`}>
                             <NavLink
                                 to="/"
                                 className={({ isActive }) =>
                                     isActive
-                                        ? `${isBlurred ? "text-[white] font-bold border-b border-[white]" : "text-[#73921d] border-b border-[#73921d]"}`
+                                        ? `${isBlurred ? "text-secondary font-bold border-b border-secondary" : "text-secondary border-b border-secondary"}`
                                         : ""
                                 }
                             >
@@ -121,7 +120,7 @@ const Header = () => {
                                 to="/allfoods"
                                 className={({ isActive }) =>
                                     isActive
-                                        ? `${isBlurred ? "text-[white] font-bold border-b border-[white]" : "text-[#73921d] border-b border-[#73921d]"}`
+                                        ? `${isBlurred ? "text-secondary font-bold border-b border-secondary" : "text-secondary border-b border-secondary"}`
                                         : ""
                                 }
                             >
@@ -131,7 +130,7 @@ const Header = () => {
                                 to="/gallery"
                                 className={({ isActive }) =>
                                     isActive
-                                        ? `${isBlurred ? "text-[white] font-bold border-b border-[white]" : "text-[#73921d] border-b border-[#73921d]"}`
+                                        ? `${isBlurred ? "text-secondary font-bold border-b border-secondary" : "text-secondary border-b border-secondary"}`
                                         : ""
                                 }
                             >
@@ -143,7 +142,7 @@ const Header = () => {
                                     to="/addfood"
                                     className={({ isActive }) =>
                                         isActive
-                                            ? `${isBlurred ? "text-[white] font-bold border-b border-[white]" : "text-[#73921d] border-b border-[#73921d]"}`
+                                            ? `${isBlurred ? "text-secondary font-bold border-b border-secondary" : "text-secondary border-b border-secondary"}`
                                             : ""
                                     }
                                 >
@@ -156,7 +155,7 @@ const Header = () => {
                     <div className="navbar-end">
 
                         <div className="flex gap-0 sm:gap-4 items-center">
-
+                            {/* <ToggleTeme></ToggleTeme> */}
 
                             <Routes>
                                 <Route path="/" element={
@@ -166,7 +165,7 @@ const Header = () => {
 
 
                                         <svg
-                                            className="swap-off h-10 sm:w-10 w-8 fill-current"
+                                            className="swap-off text-white h-10 sm:w-10 w-8 fill-current"
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 24 24"
                                         >
@@ -195,7 +194,7 @@ const Header = () => {
                                     onClick={userLogoutHandler}
                                     className={`${isBlurred && 'bg-[white] text-black text-base font-semibold py-1 px-2 sm:text-lg sm:py-2 sm:px-6 rounded-lg'
 
-                                        } bg-[#baf120] text-black text-base font-semibold py-1 px-2 sm:text-lg sm:py-2 sm:px-6 rounded-lg`}
+                                        } bg-secondary text-black text-base font-semibold py-1 px-2 sm:text-lg sm:py-2 sm:px-6 rounded-lg`}
                                 >
                                     Logout
                                 </button>

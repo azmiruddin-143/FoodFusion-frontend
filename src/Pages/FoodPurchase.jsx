@@ -29,6 +29,8 @@ const FoodPurchase = () => {
             return
         }
 
+        // const maynas = parseInt(quantity) - foodquantity
+        // console.log(maynas);
 
     
 
