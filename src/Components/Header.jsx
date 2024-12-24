@@ -157,8 +157,6 @@ const Header = () => {
                         <div className="flex gap-0 sm:gap-4 items-center">
                             {/* <ToggleTeme></ToggleTeme> */}
 
-                            <Routes>
-                                <Route path="/" element={
                                     <label className="swap swap-rotate">
 
                                         <input type="checkbox" className="theme-controller" value="dark" />
@@ -185,10 +183,7 @@ const Header = () => {
                                             />
                                         </svg>
                                     </label>
-                                } />
-                            </Routes>
-
-
+                                
                             {user ? (
                                 <button
                                     onClick={userLogoutHandler}

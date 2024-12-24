@@ -1,5 +1,5 @@
 
-
+import signleproduct from '../../src/assets/myorder-page-banner.jpg'
 import { useContext } from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Auth Provider/AuthProvider';
@@ -29,47 +29,67 @@ const SingleFood = () => {
     return (
 
         <div>
-            <form onSubmit={chek} action="">
-                <div className='my-10 mx-2 sm:mx-0'>
-                    <div class="max-w-4xl mx-auto my-5 p-4 bg-white border rounded-lg shadow-md flex flex-col md:flex-row gap-5">
-                        {/* <!-- Left Side (Image) --> */}
-                        <div class="w-full md:w-2/3">
-                            <img
-                                src={image}
-                                alt="Product Image"
-                                class="rounded-md sm:w-full h-full object-cover"
-                            />
-                        </div>
-                        {/* <!-- Right Side (Details) --> */}
-                        <div class="w-full md:w-2/3 space-y-3">
-                            <h2 class="sm:text-3xl text-lg font-bold text-gray-800">{productName}</h2>
-                            <p class="text-lg font-semibold my-0 text-gray-800">
-                                ${price}
-                            </p>
-                            <p class="text-sm text-gray-600 ">{description}</p>
-                            <div className='space-y-2 my-1 '>
-                                <h1 className='text-sm sm:text-md xl:text-lg'> Category: {category}</h1>
-                                <h1 className='text-sm sm:text-md xl:text-lg'> Food Origin: {foodorigin}</h1>
-                                <h1 className='text-sm sm:text-md xl:text-lg'> Quantity: <span className='font-bold'>{quantity}</span></h1>
-                                <h1 className='text-sm sm:text-md xl:text-lg font-bold' > Seller Details:</h1>
-                                <h1 className='text-sm sm:text-md xl:text-lg' > Name: {sellerName}</h1>
-                                <h1 className='text-sm sm:text-md xl:text-lg'> Email: {sellerEmail}</h1>
-                                <h1 className='text-sm sm:text-md xl:text-lg'> Total Purchase: <span className='font-bold'>{purchaseCount}</span> </h1>
+            <div
+                style={{
+                    backgroundImage: `url(${signleproduct})`, backgroundColor: "#00000087",
+                    backgroundBlendMode: "multiply", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"
+                }}
+                class="relative bg-gray-50 h-36 lg:h-52  flex items-center justify-center">
 
+                <h1 class="absolute inset-0 text-gray-200 sm:text-6xl lg:text-9xl font-bold flex items-center justify-center select-none">
+                    View Details
+                </h1>
 
-                            </div>
-
-                            {quantity === 0 && <h1 className='text-red-600'>Not Abilebel quantity</h1>}
-                            <button disabled={quantity === 0}
-                                class={`${quantity === 0 ? "bg-[#dddada] text-[#a4a3a3] mt-4 w-5/12 font-semibold py-2 px-4 rounded-md" : 'mt-4 w-5/12 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md'}`}
-                            >
-                                Purchase
-                            </button>
-                        </div>
-                    </div>
-
+                <div class="relative bg-white p-3 lg:p-6 rounded-lg shadow-lg z-10">
+                    <h1 class="lg:text-4xl sm:text-2xl font-bold text-primary text-center">
+                    View Details
+                    </h1>
                 </div>
-            </form>
+            </div>
+
+            <div>
+                <form onSubmit={chek} action="">
+                    <div className='my-10 mx-2 sm:mx-0'>
+                        <div class="max-w-4xl mx-auto my-5 p-4 bg-white border rounded-lg shadow-md flex flex-col md:flex-row gap-5">
+                            {/* <!-- Left Side (Image) --> */}
+                            <div class="w-full md:w-2/3">
+                                <img
+                                    src={image}
+                                    alt="Product Image"
+                                    class="rounded-md sm:w-full h-full object-cover"
+                                />
+                            </div>
+                            {/* <!-- Right Side (Details) --> */}
+                            <div class="w-full md:w-2/3 space-y-3">
+                                <h2 class="sm:text-3xl text-lg font-bold text-gray-800">{productName}</h2>
+                                <p class="text-lg font-semibold my-0 text-gray-800">
+                                    ${price}
+                                </p>
+                                <p class="text-sm text-gray-600 ">{description}</p>
+                                <div className='space-y-2 my-1 '>
+                                    <h1 className='text-sm sm:text-md xl:text-lg'> Category: {category}</h1>
+                                    <h1 className='text-sm sm:text-md xl:text-lg'> Food Origin: {foodorigin}</h1>
+                                    <h1 className='text-sm sm:text-md xl:text-lg'> Quantity: <span className='font-bold'>{quantity}</span></h1>
+                                    <h1 className='text-sm sm:text-md xl:text-lg font-bold' > Seller Details:</h1>
+                                    <h1 className='text-sm sm:text-md xl:text-lg' > Name: {sellerName}</h1>
+                                    <h1 className='text-sm sm:text-md xl:text-lg'> Email: {sellerEmail}</h1>
+                                    <h1 className='text-sm sm:text-md xl:text-lg'> Total Purchase: <span className='font-bold'>{purchaseCount}</span> </h1>
+
+
+                                </div>
+
+                                {quantity === 0 && <h1 className='text-red-600'>Not Abilebel quantity</h1>}
+                                <button disabled={quantity === 0}
+                                    class={`${quantity === 0 ? "bg-[#dddada] text-[#a4a3a3] mt-4 w-5/12 font-semibold py-2 px-4 rounded-md" : 'mt-4 w-5/12 bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md'}`}
+                                >
+                                    Purchase
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
         </div>
 
 
