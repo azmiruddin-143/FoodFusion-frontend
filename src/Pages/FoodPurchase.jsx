@@ -29,26 +29,19 @@ const FoodPurchase = () => {
             return
         }
 
-        // const maynas = parseInt(quantity) - foodquantity
-        // console.log(maynas);
-
-
-
+    
         axios.post('http://localhost:5000/purchase', purchaseObject)
             .then(result => {
                 console.log(result.data);
-                if (result.data.insertedId) {
+                if (result.data.purchaseData) {
                     Swal.fire({
                         title: "Successful Order",
                         icon: "success"
                     });
                     from.reset()
                     navigate('/myorders')
-
                 }
             })
-
-
     }
 
 
