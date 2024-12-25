@@ -29,7 +29,7 @@ const FoodPurchase = () => {
             return
         }
 
-    
+
         axios.post('http://localhost:5000/purchase', purchaseObject)
             .then(result => {
                 console.log(result.data);
@@ -47,20 +47,19 @@ const FoodPurchase = () => {
 
     return (
         <div>
-
             <div
                 style={{
                     backgroundImage: `url(${purchesebanner})`, backgroundColor: "#00000087",
                     backgroundBlendMode: "multiply", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"
                 }}
-                class="relative bg-gray-50 h-36 lg:h-52  flex items-center justify-center">
+                class="relative bg-gray-50 sm:h-24  h-12 lg:h-36 xl:h-52  flex items-center justify-center">
 
-                <h1 class="absolute inset-0 text-gray-200 sm:text-6xl lg:text-9xl font-bold flex items-center justify-center select-none">
-                Food Purchase
+                <h1 class="absolute inset-0 text-gray-200 text-4xl sm:text-5xl lg:text-7xl xl:text-9xl font-bold flex items-center justify-center select-none">
+                    Food Purchase
                 </h1>
 
-                <div class="relative bg-white p-3 lg:p-6 rounded-lg shadow-lg z-10">
-                    <h1 class="lg:text-4xl sm:text-2xl font-bold text-primary text-center">
+                <div class="relative bg-[#cbbe7dd6] p-2 xl:p-4 rounded-lg shadow-lg z-10">
+                    <h1 class="xl:text-4xl sm:text-2xl font-bold text-black text-center">
                     Food Purchase
                     </h1>
                 </div>

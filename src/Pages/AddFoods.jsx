@@ -21,7 +21,7 @@ const AddFoods = () => {
         const sellerEmail = from.useremail.value
         const foodorigin = from.foodorigin.value
         const description = from.description.value
-        const foodsObject = {productName,image,category, quantity, price, sellerName, sellerEmail, foodorigin, description, purchaseCount : 0 }
+        const foodsObject = { productName, image, category, quantity, price, sellerName, sellerEmail, foodorigin, description, purchaseCount: 0 }
 
 
         if (!image.includes('.png') && !image.includes('.jpg')) {
@@ -44,54 +44,54 @@ const AddFoods = () => {
             return;
         }
 
-         
-        axios.post('http://localhost:5000/foods',foodsObject)
-        .then(result => {
-            console.log(result.data);
-            if (result.data.insertedId) {
-                Swal.fire({
-                    title: "Post SuccessFull",
-                    text: "Successfully adding a food item",
-                    icon: "success"
-                });
 
-                from.reset()
-                from.category.value = "";
-                from.foodorigin.value ="";
-                navigate("/allfoods")
-            }
-        })
+        axios.post('http://localhost:5000/foods', foodsObject)
+            .then(result => {
+                console.log(result.data);
+                if (result.data.insertedId) {
+                    Swal.fire({
+                        title: "Post SuccessFull",
+                        text: "Successfully adding a food item",
+                        icon: "success"
+                    });
 
-  
+                    from.reset()
+                    from.category.value = "";
+                    from.foodorigin.value = "";
+                    navigate("/allfoods")
+                }
+            })
+
+
     }
 
 
     return (
         <div className=''>
-             <div
+            <div
                 style={{
                     backgroundImage: `url(${addfoodbanner})`, backgroundColor: "#00000087",
-                    backgroundBlendMode: "multiply", backgroundSize: "cover", backgroundPosition:"center", backgroundRepeat: "no-repeat"
+                    backgroundBlendMode: "multiply", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"
                 }}
-                class="relative bg-gray-50 h-36 lg:h-52  flex items-center justify-center">
+                class="relative bg-gray-50 sm:h-24  h-12 lg:h-36 xl:h-52  flex items-center justify-center">
 
-                <h1 class="absolute inset-0 text-gray-200 sm:text-6xl lg:text-9xl font-bold flex items-center justify-center select-none">
+                <h1 class="absolute inset-0 text-gray-200 text-4xl sm:text-5xl lg:text-7xl xl:text-9xl font-bold flex items-center justify-center select-none">
                     Add Food
                 </h1>
 
-                <div class="relative bg-white p-3 lg:p-6 rounded-lg shadow-lg z-10">
-                    <h1 class="lg:text-4xl sm:text-2xl font-bold text-primary text-center">
-                        Add Food
+                <div class="relative bg-[#cbbe7dd6] p-2 xl:p-4 rounded-lg shadow-lg z-10">
+                    <h1 class="xl:text-4xl sm:text-2xl font-bold text-black text-center">
+                    Add Food
                     </h1>
                 </div>
             </div>
-            
-            <form  onSubmit={addFoodsForm} className='max-w-4xl mx-auto my-10' action="">
+
+            <form onSubmit={addFoodsForm} className='max-w-4xl mx-auto my-10' action="">
                 <div className=' sm:flex gap-5'>
                     <div className="form-control w-full">
 
                         <label className="label">
-                            <span className="label-text"> Food Name </span> 
+                            <span className="label-text"> Food Name </span>
                         </label>
                         <input type="text" name='productname' placeholder="Enter your productname" className="input input-bordered" required />
 
@@ -108,7 +108,7 @@ const AddFoods = () => {
                         <label className="label">
                             <span className="label-text">Food Category </span>
                         </label>
-                        <select name="category" placeholder="Select a Category" className="select select-bordered"  required>
+                        <select name="category" placeholder="Select a Category" className="select select-bordered" required>
                             <option value="" disabled selected>Select a Food Category</option>
                             <option value="Main Courses">Main Courses</option>
                             <option value="Desserts">Desserts</option>
@@ -145,7 +145,7 @@ const AddFoods = () => {
                         <label className="label">
                             <span className="label-text">Seller Email</span>
                         </label>
-                        <input type="email" value={user?.email}  name='useremail' placeholder="Enter your product quantity" className="input input-bordered" required />
+                        <input type="email" value={user?.email} name='useremail' placeholder="Enter your product quantity" className="input input-bordered" required />
 
 
                     </div>
