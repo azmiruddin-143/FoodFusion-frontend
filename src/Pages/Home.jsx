@@ -16,7 +16,7 @@ const Home = () => {
       <ComboOffers></ComboOffers>
       <TrendingItems></TrendingItems>
       <FeaturedDiscounts></FeaturedDiscounts>
-      {/* <FoodsPerformance></FoodsPerformance> */}
+      <FoodsPerformance></FoodsPerformance>
     </div>
 
   )

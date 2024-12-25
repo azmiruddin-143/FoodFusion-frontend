@@ -8,19 +8,19 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <footer className="bg-black text-white py-8">
-            <div className="mx-28 px-4">
+            <div className="2xl:mx-28 xl:mx-24 lg:mx-5  px-4">
                 {/* Top Navigation Links */}
                 <div className="flex flex-wrap justify-center md:justify-between items-center border-b border-gray-700 pb-4 mb-4">
-                    <img src={logo} alt="Basilico Fastfood Logo" className="w-36 mb-4 md:mb-0" />
+                    <img src={logo} alt="Basilico Fastfood Logo" className="sm:w-36 w-20 mb-4 md:mb-0" />
                     <nav className="flex space-x-6 text-sm font-semibold">
                         <Link to={'/'} className="hover:underline">Home</Link>
                         <Link to={'/allfoods'} className="hover:underline">All Foods</Link>
                         <Link to={'/gallery'} className="hover:underline">Gallery</Link>
-                        <a href="#" className="hover:underline">Careers Offers</a>
-                        <a href="#" className="hover:underline">Blog</a>
-                        <a href="#" className="hover:underline">Contact</a>
-                        <a href="#" className="hover:underline">Gift Voucher</a>
-                        <a href="#" className="hover:underline">FAQs</a>
+                        <a href="#" className="hover:underline hidden md:block">Careers Offers</a>
+                        <a href="#" className="hover:underline hidden md:block">Blog</a>
+                        <a href="#" className="hover:underline hidden md:block">Contact</a>
+                        <a href="#" className="hover:underline hidden md:block">Gift Voucher</a>
+                        <a href="#" className="hover:underline hidden md:block">FAQs</a>
                     </nav>
                 </div>
 
