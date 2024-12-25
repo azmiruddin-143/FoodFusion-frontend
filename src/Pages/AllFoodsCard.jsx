@@ -4,7 +4,7 @@ const AllFoodsCard = ({food}) => {
     const {productName,image,category, _id, purchaseCount,price,} = food
     return (
 
-        <div class="max-w-sm mx-auto h-[450px] bg-[#ffffff] p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+        <div class="max-w-sm mx-auto h-[420px] bg-[#ffffff] p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
 
             <div class="relative -mt-14">
                 <img
