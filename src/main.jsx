@@ -20,10 +20,12 @@ import MyFoods from './Pages/MyFoods';
 import MyOrders from './Pages/MyOrders';
 import PrivateRoot from './Components/PrivateRoot';
 import { HelmetProvider } from 'react-helmet-async';
+import Error from './Components/Error';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
