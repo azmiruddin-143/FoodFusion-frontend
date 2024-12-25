@@ -4,8 +4,9 @@ import { IoEyeOff, IoEye } from "react-icons/io5";
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../Auth Provider/AuthProvider';
+import { Fade } from 'react-awesome-reveal';
 
 const Register = () => {
     // User Register//
@@ -113,10 +114,11 @@ const Register = () => {
 
 
     return (
+         <Fade duration={3000} triggerOnce >
         <div>
-            {/* <Helmet>
-              <title>Sports Sphere | Register</title>
-            </Helmet> */}
+            <Helmet>
+              <title>FoodFusion | Register</title>
+            </Helmet>
             <div className="sm:my-10 my-5 ">
                 <div className="hero-content flex-col mx-auto lg:flex-row-reverse">
                     <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
@@ -179,6 +181,7 @@ const Register = () => {
                 </div>
             </div>
         </div>
+        </Fade>
     );
 };
 

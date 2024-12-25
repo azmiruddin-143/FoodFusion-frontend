@@ -6,6 +6,8 @@ import MyOrdersTable from './MyOrdersTable';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
 import useAxiosSecure from '../Axios secure/useAxiosSecure';
+import { Helmet } from 'react-helmet-async';
+import { Fade } from 'react-awesome-reveal';
 
 const MyOrders = () => {
     const { user } = useContext(AuthContext)
@@ -57,7 +59,11 @@ const MyOrders = () => {
 
 
     return (
+        <Fade duration={3000} triggerOnce >
         <div>
+            <Helmet>
+                <title>FoodFusion | My Order </title>
+            </Helmet>
 
             <div
                 style={{
@@ -100,7 +106,7 @@ const MyOrders = () => {
                         <div className="flex justify-center my-5">
                             <div>
                                 <h1 className='text-4xl py-3 text-neutral'>No Data Found ?</h1>
-                                <Link to={'/allfoods'} > <button className='py-2 my-3 px-6 bg-primary text-white rounded-md'>Purchase Food</button> </Link>
+                                <Link to={'/allfoods'} > <button className='py-2 my-3 px-6 bg-primary-content text-primary rounded-md'>Purchase Food</button> </Link>
                             </div>
                         </div>
                     }
@@ -116,6 +122,7 @@ const MyOrders = () => {
                 </table>
             </div>
         </div>
+        </Fade>
     );
 };
 

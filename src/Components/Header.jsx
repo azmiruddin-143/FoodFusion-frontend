@@ -87,7 +87,7 @@ const Header = () => {
                                     <button onClick={() => setIsDropdownOpen(false)}>
                                         <IoIosCloseCircle className="absolute text-secondary right-0 top-0" size={30} />
                                     </button>
-                                    {/* <NavLink to="/" onClick={() => setIsDropdownOpen(false)}>Home</NavLink> */}
+                                    
                                     <NavLink
                                         to="/"
                                         onClick={() => setIsDropdownOpen(false)}
@@ -168,18 +168,6 @@ const Header = () => {
                                 Gallery
                             </NavLink>
 
-                            {
-                                user && <NavLink
-                                    to="/addfood"
-                                    className={({ isActive }) =>
-                                        isActive
-                                            ? `${isBlurred ? "text-secondary font-bold border-b border-secondary" : "text-secondary border-b border-secondary"}`
-                                            : ""
-                                    }
-                                >
-                                    Add Food
-                                </NavLink>
-                            }
 
                         </ul>
                     </div>

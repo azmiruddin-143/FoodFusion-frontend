@@ -7,8 +7,10 @@ import trending1 from '../../src/assets/trending-1.jpg'
 import trending2 from '../../src/assets/trending-2.jpg'
 import trending3 from '../../src/assets/trending-3.jpg'
 import trending4 from '../../src/assets/trending-4.jpg'
+import { Fade } from 'react-awesome-reveal';
 const TrendingItems = () => {
     return (
+        <Fade duration={3000} triggerOnce >
         <div className='my-10 text-center'>
             <div className="lg:py-20 m-0 p-0">
                 <Swiper
@@ -84,6 +86,7 @@ const TrendingItems = () => {
                 </Swiper>
             </div>
         </div>
+        </Fade>
     );
 };
 

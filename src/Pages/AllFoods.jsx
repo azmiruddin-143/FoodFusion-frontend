@@ -3,6 +3,8 @@ import axios from 'axios';
 import AllFoodsCard from './AllFoodsCard';
 import pagebanner from '../../src/assets/gellary-pager-banner.jpg'
 import { FaSearchengin } from "react-icons/fa6";
+import { Helmet } from 'react-helmet-async';
+import { Fade } from 'react-awesome-reveal';
 
 const AllFoods = () => {
 
@@ -25,7 +27,11 @@ const AllFoods = () => {
 
 
     return (
+        <Fade duration={3000} triggerOnce >
         <div>
+            <Helmet>
+                <title>FoodFusion | All Foods</title>
+            </Helmet>
             <div
                 style={{
                     backgroundImage: `url(${pagebanner})`, backgroundColor: "#00000087",
@@ -123,8 +129,8 @@ const AllFoods = () => {
 
             </div>
 
-
         </div>
+        </Fade>
     );
 };
 

@@ -2,8 +2,10 @@ import React from 'react';
 import shop from '../../src/assets/shop-discount.png'
 import parsent from '../../src/assets/parsent-discount.png'
 import barger from '../../src/assets/barger-discount.png'
+import { Fade } from 'react-awesome-reveal';
 const FeaturedDiscounts = () => {
     return (
+      <Fade duration={3000} triggerOnce >
         <div className="grid gap-6 sm:px-4 px-2  sm:my-7 my-5 lg:my-14 xl:my-32 2xl:mx-32 xl:mx-24 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
         {/* Card 1 */}
         <div className="bg-primary-content  text-primary py-10 px-5 rounded-lg shadow-md relative">
@@ -58,6 +60,7 @@ const FeaturedDiscounts = () => {
           
         </div>
       </div>
+      </Fade>
     );
 };
 

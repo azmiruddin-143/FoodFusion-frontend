@@ -13,14 +13,20 @@ import image7 from "../../src/assets/gallery-image-7.jpg";
 import image8 from "../../src/assets/gallery-image-8.jpg";
 import image9 from "../../src/assets/gallery-image-11.jpg";
 import image10 from "../../src/assets/gallery-image-10.jpg";
+import { Helmet } from "react-helmet-async";
+import { Fade } from "react-awesome-reveal";
 
 
 const Gellery = () => {
     const [open, setOpen] = useState(false); // লাইটবক্স খোলা/বন্ধ
     const [currentIndex, setCurrentIndex] = useState(0); // ক্লিক করা ইমেজ ইনডেক্স
     return (
+        <Fade duration={3000} triggerOnce >
         <div>
-             <div
+            <Helmet>
+                <title>FoodFusion | Gallery </title>
+            </Helmet>
+            <div
                 style={{
                     backgroundImage: `url(${gallerybanner})`, backgroundColor: "#00000087",
                     backgroundBlendMode: "multiply", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"
@@ -33,7 +39,7 @@ const Gellery = () => {
 
                 <div class="relative bg-[#cbbe7dd6] p-2 xl:p-4 rounded-lg shadow-lg z-10">
                     <h1 class="xl:text-4xl sm:text-2xl font-bold text-black text-center">
-                    Gallery
+                        Gallery
                     </h1>
                 </div>
             </div>
@@ -175,6 +181,7 @@ const Gellery = () => {
                 />
             </div>
         </div>
+        </Fade>
     );
 };
 

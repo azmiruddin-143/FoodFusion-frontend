@@ -2,8 +2,10 @@ import React from 'react';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import combo from '../../src/assets/combo1.png'
 import combo2 from '../../src/assets/combo2.png'
+import { Fade } from 'react-awesome-reveal';
 const ComboOffers = () => {
   return (
+    <Fade duration={3000} triggerOnce >
     <div className="bg-[#fef6f0] xl:my-20 2xl:my-28 lg:my-16 md:my-16 my-5  lg:py-28 sm:py-14 py-6">
       <div className="xl:mx-28 2xl:mx-32  lg:mx-5 px-4">
         {/* Header */}
@@ -103,6 +105,7 @@ const ComboOffers = () => {
 
       </div>
     </div>
+    </Fade>
   );
 };
 

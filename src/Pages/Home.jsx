@@ -5,12 +5,16 @@ import ComboOffers from '../Components/ComboOffers';
 import TrendingItems from '../Components/TrendingItems';
 import FeaturedDiscounts from '../Components/FeaturedDiscounts';
 import FoodsPerformance from '../Components/FoodsPerformance';
+import { Helmet } from 'react-helmet-async';
 
 
 const Home = () => {
   return (
 
     <div>
+      <Helmet>
+        <title>FoodFusion | Home</title>
+      </Helmet>
       <Banner></Banner>
       <TopSelling></TopSelling>
       <ComboOffers></ComboOffers>

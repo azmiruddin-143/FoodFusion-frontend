@@ -5,6 +5,8 @@ import { AuthContext } from '../Auth Provider/AuthProvider';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import purchesebanner from '../../src/assets/purchese-banner.jpg'
+import { Helmet } from 'react-helmet-async';
+import { Fade } from 'react-awesome-reveal';
 const FoodPurchase = () => {
 
     const purchaseDetails = useLoaderData()
@@ -47,7 +49,11 @@ const FoodPurchase = () => {
 
 
     return (
+        <Fade duration={3000} triggerOnce >
         <div>
+            <Helmet>
+                <title>FoodFusion | Purchase </title>
+            </Helmet>
             <div
                 style={{
                     backgroundImage: `url(${purchesebanner})`, backgroundColor: "#00000087",
@@ -116,6 +122,7 @@ const FoodPurchase = () => {
 
             </div>
         </div>
+        </Fade>
     );
 };
 

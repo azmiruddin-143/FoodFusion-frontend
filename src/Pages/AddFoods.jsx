@@ -5,6 +5,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../Auth Provider/AuthProvider';
 import axios from 'axios';
+import { Helmet } from 'react-helmet-async';
+import { Fade } from 'react-awesome-reveal';
 const AddFoods = () => {
     const { user } = useContext(AuthContext)
     const addFoodsForm = (e) => {
@@ -64,7 +66,11 @@ const AddFoods = () => {
 
 
     return (
+        <Fade duration={3000} triggerOnce >
         <div className=''>
+            <Helmet>
+                <title>FoodFusion | Add Food </title>
+            </Helmet>
             <div
                 style={{
                     backgroundImage: `url(${addfoodbanner})`, backgroundColor: "#00000087",
@@ -180,6 +186,7 @@ const AddFoods = () => {
                 </div>
             </form>
         </div>
+        </Fade>
     );
 };
 
