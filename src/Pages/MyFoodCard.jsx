@@ -151,7 +151,7 @@ const MyFoodCard = ({ myfood, updateFoodList }) => {
                                         <option value="Main Courses">Main Courses</option>
                                         <option value="Desserts">Desserts</option>
                                         <option value="Beverages">Beverages</option>
-                                        <option value="Non-Vegetarian">Non-Vegetarian</option>
+                                        <option value="Street Food">Street Food</option>
                                         <option value="Salads">Salads</option>
                                         <option value="Snacks">Snacks</option>
                                     </select>
@@ -189,7 +189,7 @@ const MyFoodCard = ({ myfood, updateFoodList }) => {
 
                                 {/* ... */}
                                 <div className="modal-action">
-                                    <button type="submit" className="btn bg-primary text-white">
+                                    <button type="submit" className="btn bg-primary-content text-primary">
                                         Update
                                     </button>
                                 </div>

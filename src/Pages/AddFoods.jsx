@@ -116,7 +116,7 @@ const AddFoods = () => {
                             <option value="Main Courses">Main Courses</option>
                             <option value="Desserts">Desserts</option>
                             <option value="Beverages">Beverages</option>
-                            <option value="Non-Vegetarian">Non-Vegetarian</option>
+                            <option value="Street Food">Street Food</option>
                             <option value="Salads">Salads</option>
                             <option value="Snacks">Snacks</option>
                         </select>
