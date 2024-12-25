@@ -24,8 +24,8 @@ const MyOrders = () => {
             text: "You won't be able to revert this!",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#9dc923",
-            cancelButtonColor: "#d33",
+            confirmButtonColor: "red",
+            cancelButtonColor: "#0e1927",
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
 
@@ -85,7 +85,7 @@ const MyOrders = () => {
                                 <th>Category</th>
                                 <th>Price</th>
                                 <th>Owner</th>
-                                <th>Total Purchase</th>
+                                <th>Food Quantity</th>
                                 <th>Date</th>
                                 <th>Action</th>
 

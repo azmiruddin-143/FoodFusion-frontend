@@ -50,7 +50,7 @@ const MyFoodCard = ({ myfood, updateFoodList }) => {
 
     };
     return (
-        <div class="max-w-sm mx-auto bg-white border rounded-lg shadow-md overflow-hidden md:max-w-md lg:max-w-lg">
+        <div class="max-w-sm mx-auto h-[570px] bg-white border rounded-lg shadow-md overflow-hidden ">
             <div class="relative">
                 <img
                     src={image}
@@ -61,14 +61,14 @@ const MyFoodCard = ({ myfood, updateFoodList }) => {
                 </div>
             </div>
             <div class="p-4">
-                <h2 class="text-2xl font-bold text-gray-800 mb-2">{productName}</h2>
-                <p class="text-gray-600 text-sm mb-2">
+                <h2 class="text-2xl  font-bold text-gray-800 mb-2">{productName}</h2>
+                <p class="text-gray-600  text-sm mb-2">
                     {description}
                 </p>
                 <span class="py-2 text-lg mb-3 ">Quantity: <span className='font-bold'>{quantity}</span> </span>
-                <div class="flex space-x-2 my-4">
-                    <span class="px-3 py-1 text-sm bg-gray-200 rounded-full">Category: {category}</span>
-                    <span class="px-3 py-1 text-sm bg-gray-200 rounded-full">Food Origin: {foodorigin}</span>
+                <div class=" my-4">
+                    <h1 class="px-3 py-1 mb-3 text-sm w-fit bg-gray-200 rounded-full">Category: {category}</h1>
+                    <h1 class="px-3 py-1 text-sm w-fit bg-gray-200 m-0 rounded-full">Food Origin: {foodorigin}</h1>
                     {/* <span class="px-3 py-1 text-sm bg-gray-200 rounded-full">Quantity: {quantity}</span> */}
                 </div>
                 <div class="flex justify-between items-center">

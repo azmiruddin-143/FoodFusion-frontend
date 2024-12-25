@@ -5,10 +5,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../Auth Provider/AuthProvider';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 const AddFoods = () => {
     const { user } = useContext(AuthContext)
-    const navigate = useNavigate()
     const addFoodsForm = (e) => {
         e.preventDefault()
         const from = e.target
@@ -58,7 +56,6 @@ const AddFoods = () => {
                     from.reset()
                     from.category.value = "";
                     from.foodorigin.value = "";
-                    navigate("/allfoods")
                 }
             })
 

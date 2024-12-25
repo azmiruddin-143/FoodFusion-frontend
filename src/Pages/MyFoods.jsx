@@ -43,8 +43,7 @@ const MyFoods = () => {
                     </h1>
                 </div>
             </div>
-            <div className=' sm:grid-cols-2 mx-52 gap-8 my-16 place-items-center  grid xl:grid-cols-3 lg:grid-cols-3 grid-cols-1 '>
-
+            <div className=' sm:grid-cols-2 2xl:mx-52 mx-5 xl:mx-10 gap-3 md:my-16 my-4 place-items-center gap-y-10  grid xl:grid-cols-3 lg:grid-cols-3 grid-cols-1'>
                 {
                     myFoods.map(myfood => <MyFoodCard key={myfood._id} myfood={myfood} updateFoodList={updateFoodList} ></MyFoodCard>)
                 }

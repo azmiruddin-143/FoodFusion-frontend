@@ -3,7 +3,7 @@ import moment from 'moment/moment';
 import React from 'react';
 import { FaTrashAlt } from "react-icons/fa";
 const MyOrdersTable = ({ myOrder, index,foodDilet }) => {
-    const { productName, price, foodquantity, buyingDate, image, purchaseCount, _id, category, buyerEmail } = myOrder
+    const { productName, price, foodquantity, buyingDate, image, purchaseCount, _id, category, buyerEmail,sellerEmail } = myOrder
     const formattedDate = moment(buyingDate).format('MMMM Do YYYY, h:mm:ss a');
 
     return (
@@ -21,8 +21,8 @@ const MyOrdersTable = ({ myOrder, index,foodDilet }) => {
                 <td>{productName}</td>
                 <td>{category} </td>
                 <td> ${price}</td>
-                <td> {buyerEmail}</td>
-                <td>{purchaseCount}</td>
+                <td> {sellerEmail}</td>
+                <td>{foodquantity}</td>
                 <td>{formattedDate}</td>
                 <td>
                     <button onClick={() => foodDilet(_id)}>

@@ -8,7 +8,8 @@ import purchesebanner from '../../src/assets/purchese-banner.jpg'
 const FoodPurchase = () => {
 
     const purchaseDetails = useLoaderData()
-    const { productName, _id, purchaseCount, image, category, quantity, price, userName, useremail, } = purchaseDetails
+    const { productName, _id, purchaseCount, image, category, quantity, price, userName, useremail, sellerEmail, } = purchaseDetails
+    console.log(sellerEmail);
     const { user } = useContext(AuthContext)
     const navigate = useNavigate()
 
@@ -20,7 +21,7 @@ const FoodPurchase = () => {
         const buyerEmail = from.buyerEmail.value
         const price = from.price.value
         const foodquantity = parseInt(from.foodquantity.value)
-        const purchaseObject = { productName, buyerName, buyerEmail, category, image, price, purchaseCount, foodquantity, purchaseId: _id, seller: useremail, buyingDate: Date.now() }
+        const purchaseObject = { productName, buyerName, buyerEmail, category, image, price, purchaseCount, foodquantity, purchaseId: _id,  sellerEmail, buyingDate: Date.now() }
 
         if (foodquantity > quantity) {
             toast.error(`item is not available!`, {
@@ -64,7 +65,7 @@ const FoodPurchase = () => {
                     </h1>
                 </div>
             </div>
-            <div className='my-10 mx-10 '>
+            <div className='my-10 sm:mx-10 mx-2 '>
                 <form onSubmit={PurchaseForm} className='max-w-md mx-auto p-5 rounded-md  bg-base-300' action="">
 
                     <div className="form-control w-full">

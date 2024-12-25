@@ -5,13 +5,14 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCnDyxSVtWsmCYDk8RwQhIEezpK0lQGUmw",
-  authDomain: "foodfusion-4eca3.firebaseapp.com",
-  projectId: "foodfusion-4eca3",
-  storageBucket: "foodfusion-4eca3.firebasestorage.app",
-  messagingSenderId: "175497693967",
-  appId: "1:175497693967:web:56303354c88ba229e40c7a"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId:import.meta.env. VITE_projectId,
+  storageBucket:import.meta.env.VITE_storageBucket,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
