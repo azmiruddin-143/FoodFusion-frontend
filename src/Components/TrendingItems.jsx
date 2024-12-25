@@ -9,7 +9,7 @@ import trending3 from '../../src/assets/trending-3.jpg'
 import trending4 from '../../src/assets/trending-4.jpg'
 const TrendingItems = () => {
     return (
-        <div className='md:my-28 text-center my-14'>
+        <div className='my-10 text-center'>
             <div className="lg:py-20 m-0 p-0">
                 <Swiper
                     modules={[Navigation, Autoplay]}
