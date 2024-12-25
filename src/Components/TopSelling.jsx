@@ -13,9 +13,9 @@ const TopSelling = () => {
     }, [])
     return (
         <div>
-            <h1 className='text-center text-secondary font-bold text-5xl uppercase mt-16'>Top Selling</h1>
-            <p className='text-center mx-auto mt-3 w-4/12'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus delectus expedita repudiandae?</p>
-            <div className='sm:my-16 my-5'>
+            <h1 className='text-center text-secondary font-bold sm:text-5xl text-3xl uppercase mt-8 sm:mt-16'>Top Selling</h1>
+            <p className='text-center mx-auto text-black mt-3 sm:w-6/12 lg:w-5/12 xl:w-4/12'>Explore our top-selling products, loved by customers for their exceptional quality and unbeatable value</p>
+            <div className='sm:my-8 xl:my-16 my-5'>
                
                     <div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 place-items-center sm:gap-y-5 lg:gap-y-12 lg:mx-5 2xl:mx-52 xl:mx-52'>
                         {
