@@ -33,5 +33,7 @@
 - sweetalert2
 - swiper
 
+### Welcome to our FoodFusion, where you can explore, post, and discover an extensive range of delicious foods! Our platform is designed for food lovers, chefs, and anyone passionate about culinary delights.
+
 # Client Repositories: https://github.com/programming-hero-web-course2/b10a11-client-side-azmiruddin-143
 # Server Repositories: https://github.com/programming-hero-web-course2/b10a11-server-side-azmiruddin-143
