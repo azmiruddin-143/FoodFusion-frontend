@@ -24,7 +24,7 @@ const Banner = () => {
                 effect="fade"
                 slidesPerView={1}
                 loop={true}
-                className="2xl:h-[850px] md:h-[450px] lg:h-[600px] h-[200px]"
+                className="2xl:h-[850px] md:h-[450px] lg:h-[600px] sm:h-[400px] h-[350px]"
                 pagination={{
                     clickable: true,
                     renderBullet: (index, className) => {
@@ -42,17 +42,17 @@ const Banner = () => {
                         }}
                         className="bg-cover bg-no-repeat bg-center w-full h-full flex justify-start items-center"
                     >
-                        <div className="ml-36 space-y-4">
-                            <h1 className="text-6xl w-7/12 text-white font-bold">
+                        <div className="2xl:ml-36 xl:ml-28 lg:ml-10 ml-4 sm:ml-6 sm:space-y-4 space-y-2">
+                            <h1 className="lg:text-6xl sm:text-4xl text-2xl sm:w-7/12 text-white font-bold">
                                 Discover the Taste of Freshness
                             </h1>
-                            <p className="w-7/12 text-white font-bold">
+                            <p className="lg:w-7/12  text-sm sm:text-md lg:text-lg sm:w-8/12 text-white font-bold">
                                 Savor the best collection of organic and fresh foods delivered
                                 straight to your doorstep. Experience the perfect blend of taste
                                 and nutrition in every bite.
                             </p>
                             <Link to={"/allfoods"} className="border-b border-secondary py-4">
-                                <button className="bg-secondary text-black  font-bold py-2 px-6 mt-6 ">Purchase menu</button>
+                                <button className="bg-secondary text-black text-sm sm:text-md lg:text-xl font-bold py-1 px-4 sm:py-2 sm:px-6 sm:mt-6 mt-4 ">Purchase menu</button>
                             </Link>
                         </div>
                     </div>
@@ -67,17 +67,17 @@ const Banner = () => {
                         }}
                         className="bg-cover bg-no-repeat bg-center w-full h-full flex justify-start items-center"
                     >
-                        <div className="ml-36 space-y-4">
-                            <h1 className="text-6xl w-7/12 text-white font-bold">
+                        <div className="2xl:ml-36 xl:ml-28 lg:ml-10 ml-4 sm:ml-6 sm:space-y-4 space-y-2">
+                            <h1 className="lg:text-6xl sm:text-4xl text-2xl sm:w-7/12 text-white font-bold">
                                 Favorite Meals, Delivered Fast
                             </h1>
-                            <p className="w-7/12 text-white font-bold">
+                            <p className="lg:w-7/12  text-sm sm:text-md lg:text-lg sm:w-8/12 text-white font-bold">
                                 Choose from a variety of delicious dishes and snacks prepared with
                                 care and quality ingredients. Indulge in the flavors you love
                                 anytime, anywhere
                             </p>
                             <Link to={"/allfoods"} className="border-b border-secondary py-4">
-                                <button className="bg-secondary text-black  font-bold py-2 px-6 mt-6 ">Purchase menu</button>
+                                <button className="bg-secondary text-black text-sm sm:text-md lg:text-xl font-bold py-1 px-4 sm:py-2 sm:px-6 sm:mt-6 mt-4 ">Purchase menu</button>
                             </Link>
                         </div>
                     </div>
@@ -90,15 +90,15 @@ const Banner = () => {
                         }}
                         className="bg-cover bg-no-repeat bg-center w-full h-full flex justify-start items-center"
                     >
-                        <div className="ml-36 space-y-4">
-                            <h1 className="text-6xl w-7/12 text-white font-bold">
+                        <div className="2xl:ml-36 xl:ml-28 lg:ml-10 ml-4 sm:ml-6 sm:space-y-4 space-y-2">
+                            <h1 className="lg:text-6xl sm:text-4xl text-2xl sm:w-7/12 text-white font-bold">
                             Discover the Best Burgers
                             </h1>
-                            <p className="w-7/12 text-white font-bold">
+                            <p className="lg:w-7/12  text-sm sm:text-md lg:text-lg sm:w-8/12 text-white font-bold">
                             Savor the ultimate taste experience with our burgers, crafted using fresh, high-quality ingredients to deliver flavor and satisfaction in every bite
                             </p>
                             <Link to={"/allfoods"} className="border-b border-secondary py-4">
-                                <button className="bg-secondary text-black  font-bold py-2 px-6 mt-6 ">Purchase menu</button>
+                                <button className="bg-secondary text-black text-sm sm:text-md lg:text-xl font-bold py-1 px-4 sm:py-2 sm:px-6 sm:mt-6 mt-4 ">Purchase menu</button>
                             </Link>
                         </div>
                     </div>

@@ -12,11 +12,11 @@ const Home = () => {
 
     <div>
       <Banner></Banner>
-      <TopSelling></TopSelling>
-      <ComboOffers></ComboOffers>
-      <TrendingItems></TrendingItems>
-      <FeaturedDiscounts></FeaturedDiscounts>
-      <FoodsPerformance></FoodsPerformance>
+      {/* <TopSelling></TopSelling> */}
+      {/* <ComboOffers></ComboOffers> */}
+      {/* <TrendingItems></TrendingItems> */}
+      {/* <FeaturedDiscounts></FeaturedDiscounts> */}
+      {/* <FoodsPerformance></FoodsPerformance> */}
     </div>
 
   )

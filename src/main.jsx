@@ -18,51 +18,52 @@ import SingleFood from './Pages/SingleFood';
 import FoodPurchase from './Pages/FoodPurchase';
 import MyFoods from './Pages/MyFoods';
 import MyOrders from './Pages/MyOrders';
+import PrivateRoot from './Components/PrivateRoot';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children : [
+    children: [
       {
-        path:"/",
+        path: "/",
         element: <Home></Home>
       },
       {
-        path:"/allfoods",
+        path: "/allfoods",
         element: <AllFoods></AllFoods>
       },
       {
-        path:"/singlefood/:id",
+        path: "/singlefood/:id",
         element: <SingleFood></SingleFood>,
-        loader : ({params}) => fetch(`http://localhost:5000/singlefood/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/singlefood/${params.id}`)
       },
       {
-        path:"/foodpurchase/:id",
-        element: <FoodPurchase></FoodPurchase>,
-        loader : ({params}) => fetch(`http://localhost:5000/foodpurchase/${params.id}`)
+        path: "/foodpurchase/:id",
+        element: <PrivateRoot><FoodPurchase></FoodPurchase></PrivateRoot>,
+        loader: ({ params }) => fetch(`http://localhost:5000/foodpurchase/${params.id}`)
       },
       {
-        path:"/gallery",
+        path: "/gallery",
         element: <Gellery></Gellery>
       },
       {
-        path:"/addfood",
-        element:  <AddFoods></AddFoods>
+        path: "/addfood",
+        element: <PrivateRoot> <AddFoods></AddFoods></PrivateRoot>
       },
       {
-        path:"/myfoods",
-        element:  <MyFoods></MyFoods>
+        path: "/myfoods",
+        element: <PrivateRoot><MyFoods></MyFoods></PrivateRoot>
       },
       {
-        path:"/myorders",
-        element:  <MyOrders></MyOrders>
+        path: "/myorders",
+        element: <PrivateRoot><MyOrders></MyOrders></PrivateRoot>
       },
       {
-        path:"/login",
+        path: "/login",
         element: <Login></Login>
       },
       {
-        path:"/register",
+        path: "/register",
         element: <Register></Register>
       }
     ]

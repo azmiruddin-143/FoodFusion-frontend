@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import { authContext } from '../AuthProvider/AuthProvider';
 import { Navigate, useLocation } from 'react-router-dom';
-import Loader from '../LoaderPage/Loader';
+import { AuthContext } from '../Auth Provider/AuthProvider';
+import Loader from './Loader';
 
 const PrivateRoot = ({children}) => {
-    const {user,loader} = useContext(authContext)
+    const {user,loader} = useContext(AuthContext)
     const location = useLocation()
  
     if(loader){
-        return <Loader></Loader>;
+        return <Loader></Loader>
     }
     if(user){
         return children;
