@@ -4,7 +4,7 @@ import parsent from '../../src/assets/parsent-discount.png'
 import barger from '../../src/assets/barger-discount.png'
 const FeaturedDiscounts = () => {
     return (
-        <div className="grid gap-6 px-4 py-8 mx-28 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 px-4 sm:my-7 my-5 lg:my-14 xl:my-32 2xl:mx-28 xl:mx-24 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
         {/* Card 1 */}
         <div className=" bg-primary  text-white py-10 px-5 rounded-lg shadow-md relative">
           <div className="absolute top-4 right-4">
@@ -14,7 +14,7 @@ const FeaturedDiscounts = () => {
               className="w-24"
             />
           </div>
-          <h3 className="text-4xl  w-8/12 font-bold mb-4">Gift Vouchers For Friends</h3>
+          <h3 className="lg:text-4xl text-3xl  w-9/12  2xl:w-8/12 font-bold mb-4">Gift Vouchers For Friends</h3>
           <p className="text-md w-8/12 mb-4">
             Give gift vouchers to your friends and relatives to enjoy our fast
             food, Nunc id ullamcorper.
@@ -31,7 +31,7 @@ const FeaturedDiscounts = () => {
               className="w-24"
             />
           </div>
-          <h3 className="text-4xl text-primary w-8/12 font-bold mb-4">First Order First Discount</h3>
+          <h3 className="lg:text-4xl text-3xl text-primary w-9/12  2xl:w-8/12 font-bold mb-4">First Order First Discount</h3>
           <p className="text-md w-8/12 text-primary mb-4">
             20% discount on first order, Nam ut augue pulvinar turpis malesuada
             condimentum.
@@ -48,7 +48,7 @@ const FeaturedDiscounts = () => {
               className="w-24"
             />
           </div>
-          <h3 className="text-4xl w-8/12 font-bold mb-4">New Season New Food</h3>
+          <h3 className="lg:text-4xl text-3xl w-9/12  2xl:w-8/12 font-bold mb-4">New Season New Food</h3>
           <p className="text-md w-8/12 mb-4">
             Discover new items at the store this summer, Aliquam faucibus lacus et
             dolor iaculis!
