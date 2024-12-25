@@ -35,12 +35,12 @@ const router = createBrowserRouter([
       {
         path: "/singlefood/:id",
         element: <SingleFood></SingleFood>,
-        loader: ({ params }) => fetch(`http://localhost:5000/singlefood/${params.id}`)
+        loader: ({ params }) => fetch(`https://server-food-ochre.vercel.app/singlefood/${params.id}`)
       },
       {
         path: "/foodpurchase/:id",
         element: <PrivateRoot><FoodPurchase></FoodPurchase></PrivateRoot>,
-        loader: ({ params }) => fetch(`http://localhost:5000/foodpurchase/${params.id}`)
+        loader: ({ params }) => fetch(`https://server-food-ochre.vercel.app/foodpurchase/${params.id}`)
       },
       {
         path: "/gallery",

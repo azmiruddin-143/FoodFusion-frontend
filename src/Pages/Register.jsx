@@ -155,7 +155,7 @@ const Register = () => {
                                 </div>
                                 <div className="form-control mt-3">
                                     <label className="cursor-pointer justify-start gap-4 label">
-                                        <input type="checkbox" name='trams' className="checkbox " />
+                                        <input type="checkbox" name='trams' className="checkbox checkbox-secondary" />
                                         <span className="label-text">Remember me</span>
 
                                     </label>
@@ -164,7 +164,7 @@ const Register = () => {
 
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-[#9dc923] hover:bg-[#9dc923] text-white">Register</button>
+                                <button className="btn bg-primary-content hover:bg-primary-content text-primary">Register</button>
                             </div>
 
                             <div className="divider">OR</div>
@@ -172,7 +172,7 @@ const Register = () => {
                                 <img className='w-[30px]' src={google} alt="" />
                                 <h1>Sign in with Google</h1>
                             </div>
-                            <h1 className='text-lg text-center'>Already a user ? <Link to="/login" className='text-[#9dc923]'>Login</Link></h1>
+                            <h1 className='text-lg text-center'>Already a user ? <Link to="/login" className='text-[#e3ab61]'>Login</Link></h1>
                         </form>
 
                     </div>

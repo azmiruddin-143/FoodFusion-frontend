@@ -11,7 +11,7 @@ const AllFoods = () => {
     const [filter, setFilter] = useState('')
     const [sort, setSort] = useState('')
     useEffect(() => {
-        axios.get(`http://localhost:5000/all-foods?search=${search}&filter=${filter}&sort=${sort}`)
+        axios.get(`https://server-food-ochre.vercel.app/all-foods?search=${search}&filter=${filter}&sort=${sort}`)
             .then(result => {
                 setAllFoods(result.data)
             })
@@ -58,7 +58,7 @@ const AllFoods = () => {
                         onChange={(e) => setSearch(e.target.value)}
                     />
 
-                    <button className='px-1 md:px-4 py-3 text-sm font-medium tracking-wider uppercase transition-colors duration-300 transform '>
+                    <button className='px-1 md:px-4 py-3 text-sm text-neutral '>
                         <FaSearchengin size={25} />
                     </button>
                 </div>
@@ -66,7 +66,7 @@ const AllFoods = () => {
 
             <div className='lg:flex place-items-center items-start gap-4 xl:mx-10 sm:mx-5 justify-center'>
 
-                <div className='lg:sticky lg:top-24 z-20 w-fit shadow-lg  p-5'>
+                <div className='lg:sticky lg:top-24 z-20 mt-6 w-fit bg-info-content rounded-md shadow-lg  p-5'>
                     <div className='mb-8' >
                         <select
                             name='category'
@@ -107,7 +107,7 @@ const AllFoods = () => {
 
                 {
                     allFoods.length === 0 ?
-                        <h1 className='sm:text-3xl lg:text-5xl text-center py-7 mx-auto text-primary lg:pr-52'>No Data Found ?</h1>
+                        <h1 className='sm:text-3xl lg:text-5xl text-center py-7 mx-auto text-neutral lg:pr-52'>No Data Found ?</h1>
                         :
                         <div>
 

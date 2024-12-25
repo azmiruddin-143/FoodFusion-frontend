@@ -11,7 +11,7 @@ const ComboOffers = () => {
           <p className="text-[#f26026] font-semibold">
             EAT FREELY WITHOUT WORRYING ABOUT THE PRICE
           </p>
-          <h1 className="sm:text-3xl text-2xl font-bold mt-2 text-primary">Special Combo Offer</h1>
+          <h1 className="sm:text-3xl text-black text-2xl font-bold mt-2 ">Special Combo Offer</h1>
           <div className="h-[2px] bg-secondary w-16 mx-auto mt-2"></div>
         </div>
 
@@ -44,7 +44,7 @@ const ComboOffers = () => {
                   Cold Pepsi
                 </li>
               </ul>
-              <button className="mt-4 px-6 py-2 bg-primary text-white font-semibold rounded-full">
+              <button className="mt-4 px-6 py-2 bg-black text-white font-semibold rounded-full">
                 Purchase Combo
               </button>
             </div>
@@ -85,7 +85,7 @@ const ComboOffers = () => {
                   Cold Pepsi
                 </li>
               </ul>
-              <button className="mt-4 px-6 py-2 bg-primary  text-white font-semibold rounded-full">
+              <button className="mt-4 px-6 py-2 bg-black  text-white font-semibold rounded-full">
                 Purchase Combo
               </button>
             </div>

@@ -130,7 +130,7 @@ const Login = () => {
 
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-[#3c4483] hover:bg-[#3c4483] text-white">Login</button>
+                                <button className="btn bg-primary-content hover:bg-primary-content text-primary">Login</button>
                             </div>
 
                             <div className="divider">OR</div>

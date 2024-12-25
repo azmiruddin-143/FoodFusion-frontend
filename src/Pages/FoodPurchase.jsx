@@ -31,7 +31,7 @@ const FoodPurchase = () => {
         }
 
 
-        axios.post('http://localhost:5000/purchase', purchaseObject)
+        axios.post('https://server-food-ochre.vercel.app/purchase', purchaseObject)
             .then(result => {
                 console.log(result.data);
                 if (result.data.purchaseData) {
@@ -70,21 +70,21 @@ const FoodPurchase = () => {
 
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text"> Food Name </span>
+                            <span className="label-text text-neutral"> Food Name </span>
                         </label>
                         <input type="text" value={productName} name='productname' placeholder="Enter your productname" className="input input-bordered" required />
                     </div>
 
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Price</span>
+                            <span className="label-text text-neutral">Price</span>
                         </label>
                         <input type="number" value={price} name='price' placeholder="Enter your product price" className="input input-bordered" required />
                     </div>
 
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Food Quantity</span>
+                            <span className="label-text text-neutral">Food Quantity</span>
                         </label>
                         <input type="number" name='foodquantity' placeholder="Enter your product quantity" className="input input-bordered" required />
 
@@ -93,7 +93,7 @@ const FoodPurchase = () => {
 
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Buyer Name</span>
+                            <span className="label-text text-neutral">Buyer Name</span>
                         </label>
                         <input type="text"
                             name='buyerName' value={user?.displayName} placeholder="Enter your product quantity" className="input input-bordered" required />
@@ -101,7 +101,7 @@ const FoodPurchase = () => {
 
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Buyer Email</span>
+                            <span className="label-text text-neutral">Buyer Email</span>
                         </label>
                         <input type="email" value={user?.email} name='buyerEmail' placeholder="Enter your product quantity" className="input input-bordered" required />
 
@@ -110,7 +110,7 @@ const FoodPurchase = () => {
 
 
                     <div className='w-full'>
-                        <button className={'bg-primary text-white font-bold w-full py-2 px-3 my-5 rounded-lg'}>Purchase</button>
+                        <button className={'bg-primary-content text-primary font-bold w-full py-2 px-3 my-5 rounded-lg'}>Purchase</button>
                     </div>
                 </form>
 

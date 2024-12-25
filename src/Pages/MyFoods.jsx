@@ -1,14 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Auth Provider/AuthProvider';
-import axios from 'axios';
+import axios, { Axios } from 'axios';
 import MyFoodCard from './MyFoodCard';
 import myfoodbanner from '../../src/assets/myfood-banner.jpg'
+import useAxiosSecure from '../Axios secure/useAxiosSecure';
 
 const MyFoods = () => {
     const { user } = useContext(AuthContext)
     const [myFoods, setMyFoods] = useState([])
+    const axiosSecure = useAxiosSecure()
     useEffect(() => {
-        axios.get(`http://localhost:5000/foods/${user?.email}`)
+        axiosSecure.get(`/foods/${user?.email}`)
             .then(result => {
                 setMyFoods(result.data)
             })

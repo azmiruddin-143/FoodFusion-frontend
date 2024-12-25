@@ -1,6 +1,7 @@
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react';
 import { auth } from '../Firebase Setup/Firebase.init';
+import axios from 'axios';
 export const AuthContext = createContext()
 const AuthProvider = ({ children }) => {
 
@@ -20,9 +21,9 @@ const AuthProvider = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
-     // login User //
+    // login User //
 
-     const loginUser = (email, password) => {
+    const loginUser = (email, password) => {
         setLoader(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
@@ -37,25 +38,41 @@ const AuthProvider = ({ children }) => {
         return updateProfile(auth.currentUser, profileUpdate)
     }
 
-  
+
 
     useEffect(() => {
         const unsubscibe = onAuthStateChanged(auth, (currentUser) => {
             setuser(currentUser)
+            if (currentUser?.email) {
+                const user = { email: currentUser.email };
+                axios.post('https://server-food-ochre.vercel.app/jwt', user, {
+                    withCredentials: true
+                })
+                    .then(result => {
+                        console.log(result.data);
+                    })
+            } else {
+                axios.post('https://server-food-ochre.vercel.app/logout', {}, {
+                    withCredentials: true
+                })
+                    .then(result => {
+                        console.log("logout", result.data);
+                    })
+            }
             setLoader(false)
 
         })
         return () => {
-          return  unsubscibe()
+            return unsubscibe()
         }
     }, [])
 
-    useEffect(() =>{
-        if(user){
+    useEffect(() => {
+        if (user) {
             setLoader(false)
         }
-        
-   },[user])
+
+    }, [user])
 
 
 
@@ -72,7 +89,7 @@ const AuthProvider = ({ children }) => {
 
     return (
         <div>
-             <AuthContext.Provider value={authObjct}>
+            <AuthContext.Provider value={authObjct}>
                 {children}
             </AuthContext.Provider>
         </div>

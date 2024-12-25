@@ -51,7 +51,7 @@ const Header = () => {
 
     return (
         <div
-            className={`sticky top-0 w-full z-40 transition-all duration-300 ${isBlurred ? "bg-[#07060995] backdrop-blur-md " : "bg-primary"
+            className={`sticky top-0 w-full z-40 transition-all duration-300 ${isBlurred ? "bg-[#07060995] backdrop-blur-md " : "bg-accent"
                 }`}
         >
             <div className="2xl:mx-32 xl:mx-24 sm:mx-4 ">
@@ -82,7 +82,7 @@ const Header = () => {
                             {isDropdownOpen && (
                                 <ul
                                     tabIndex={0}
-                                    className="menu menu-sm dropdown-content gap-4 bg-primary text-white rounded-box z-[1] mt-3 w-44 sm:w-52 py-6 px-2 shadow"
+                                    className="menu menu-sm dropdown-content gap-4 text-neutral bg-primary rounded-box z-[1] mt-3 w-44 sm:w-52 py-6 px-2 shadow"
                                 >
                                     <button onClick={() => setIsDropdownOpen(false)}>
                                         <IoIosCloseCircle className="absolute text-secondary right-0 top-0" size={30} />
@@ -130,7 +130,7 @@ const Header = () => {
                         </div>
                         <div className='flex items-center gap-0 sm:gap-3'>
                             <img className={`${isBlurred ? 'sm:w-[60px] w-[40px] rounded-full' : "sm:w-[60px] w-[40px] rounded-full"}`} src={sitelogo} alt="" />
-                            <h1 className={`${isBlurred && "text-white font-bold"} sm:text-3xl text-[12px] pl-2 lg:pl-0 lg:text-xl xl:text-3xl text-secondary font-bold`}> FoodFusion
+                            <h1 className={`${isBlurred && "text-secondary font-bold"} sm:text-3xl text-[12px] pl-2 lg:pl-0 lg:text-xl xl:text-3xl text-secondary font-bold`}> FoodFusion
                             </h1>
                         </div>
                     </div>
@@ -195,7 +195,7 @@ const Header = () => {
 
 
                                 <svg
-                                    className="swap-off text-white h-10 sm:w-10 w-8 fill-current"
+                                    className="swap-off text-secondary h-10 sm:w-10 w-8 fill-current"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24"
                                 >
@@ -206,7 +206,7 @@ const Header = () => {
 
 
                                 <svg
-                                    className="swap-on h-10 sm:w-10 w-8 fill-current"
+                                    className="swap-on text-secondary h-10 sm:w-10 w-8 fill-current"
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24"
                                 >
@@ -229,7 +229,7 @@ const Header = () => {
                                 <Link to="/login">
                                     <button className={`${isBlurred && 'bg-[white] text-black text-base font-semibold py-1 px-2 sm:text-lg sm:py-2 sm:px-6 rounded-lg'
 
-                                        } bg-[#baf120] text-black text-base font-semibold py-1 px-2 sm:text-lg sm:py-2 sm:px-6 rounded-lg`}>
+                                        } bg-secondary text-black text-base font-semibold py-1 px-2 sm:text-lg sm:py-2 sm:px-6 rounded-lg`}>
                                         Login
                                     </button>
                                 </Link>
@@ -257,7 +257,7 @@ const Header = () => {
                                         </div>
                                         <ul
                                             tabIndex={0}
-                                            className="menu menu-sm dropdown-content text-white bg-primary space-y-3 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                                            className="menu menu-sm dropdown-content text-neutral bg-primary space-y-3 rounded-box z-[1] mt-3 w-52 p-2 shadow">
 
                                             <NavLink
                                                 to="/myfoods"

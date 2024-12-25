@@ -30,7 +30,7 @@ const MyFoodCard = ({ myfood, updateFoodList }) => {
         const price = from.price.value
         const updateObject = { productName, image, description, quantity, category,foodorigin, price }
 
-        axios.put(`http://localhost:5000/myfoods/${_id}`, updateObject)
+        axios.put(`https://server-food-ochre.vercel.app/myfoods/${_id}`, updateObject)
             .then(result => {
                 console.log(result.data);
                 if (result.data.modifiedCount > 0) {
@@ -50,7 +50,7 @@ const MyFoodCard = ({ myfood, updateFoodList }) => {
 
     };
     return (
-        <div class="max-w-sm mx-auto h-[570px] bg-white border rounded-lg shadow-md overflow-hidden ">
+        <div class="max-w-sm mx-auto h-[570px] bg-info border rounded-lg shadow-md overflow-hidden ">
             <div class="relative">
                 <img
                     src={image}
@@ -61,20 +61,20 @@ const MyFoodCard = ({ myfood, updateFoodList }) => {
                 </div>
             </div>
             <div class="p-4">
-                <h2 class="text-2xl  font-bold text-gray-800 mb-2">{productName}</h2>
-                <p class="text-gray-600  text-sm mb-2">
+                <h2 class="text-2xl  font-bold text-neutral mb-2">{productName}</h2>
+                <p class="text-neutral  text-sm mb-2">
                     {description}
                 </p>
-                <span class="py-2 text-lg mb-3 ">Quantity: <span className='font-bold'>{quantity}</span> </span>
+                <span class="py-2 text-lg mb-3 text-neutral ">Quantity: <span className='font-bold text-neutral'>{quantity}</span> </span>
                 <div class=" my-4">
                     <h1 class="px-3 py-1 mb-3 text-sm w-fit bg-gray-200 rounded-full">Category: {category}</h1>
                     <h1 class="px-3 py-1 text-sm w-fit bg-gray-200 m-0 rounded-full">Food Origin: {foodorigin}</h1>
                     {/* <span class="px-3 py-1 text-sm bg-gray-200 rounded-full">Quantity: {quantity}</span> */}
                 </div>
                 <div class="flex justify-between items-center">
-                    <span class="text-lg font-bold">${price}</span>
+                    <span class="text-lg font-bold text-neutral">${price}</span>
                     <Link >
-                        <button onClick={handleModalOpen} class="bg-secondary text-black font-bold px-4 py-2 rounded-lg ">
+                        <button onClick={handleModalOpen} class="bg-primary-content text-primary font-bold px-4 py-2 rounded-lg ">
                             Update
                         </button>
                     </Link>

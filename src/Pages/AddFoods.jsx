@@ -43,7 +43,7 @@ const AddFoods = () => {
         }
 
 
-        axios.post('http://localhost:5000/foods', foodsObject)
+        axios.post('https://server-food-ochre.vercel.app/foods', foodsObject)
             .then(result => {
                 console.log(result.data);
                 if (result.data.insertedId) {
@@ -88,14 +88,14 @@ const AddFoods = () => {
                     <div className="form-control w-full">
 
                         <label className="label">
-                            <span className="label-text"> Food Name </span>
+                            <span className="label-text text-neutral"> Food Name </span>
                         </label>
                         <input type="text" name='productname' placeholder="Enter your productname" className="input input-bordered" required />
 
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Image</span>
+                            <span className="label-text text-neutral">Image</span>
                         </label>
                         <input type="text" name='image' placeholder="Enter your image url" className="input input-bordered" required />
                     </div>
@@ -103,7 +103,7 @@ const AddFoods = () => {
                 <div className='sm:flex gap-5'>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Food Category </span>
+                            <span className="label-text text-neutral">Food Category </span>
                         </label>
                         <select name="category" placeholder="Select a Category" className="select select-bordered" required>
                             <option value="" disabled selected>Select a Food Category</option>
@@ -117,7 +117,7 @@ const AddFoods = () => {
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Quantity</span>
+                            <span className="label-text text-neutral">Quantity</span>
                         </label>
                         <input type="number" name='quantity' placeholder="Enter your product quantity" className="input input-bordered" required />
                     </div>
@@ -125,13 +125,13 @@ const AddFoods = () => {
                 <div className='sm:flex gap-5'>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Price</span>
+                            <span className="label-text text-neutral">Price</span>
                         </label>
                         <input type="number" name='price' placeholder="Enter your product price" className="input input-bordered" required />
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Seller Name</span>
+                            <span className="label-text text-neutral">Seller Name</span>
                         </label>
                         <input type="text"
                             name='username' value={user?.displayName} placeholder="Enter your product quantity" className="input input-bordered" required />
@@ -140,7 +140,7 @@ const AddFoods = () => {
                 <div className='sm:flex gap-5'>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Seller Email</span>
+                            <span className="label-text text-neutral">Seller Email</span>
                         </label>
                         <input type="email" value={user?.email} name='useremail' placeholder="Enter your product quantity" className="input input-bordered" required />
 
@@ -148,7 +148,7 @@ const AddFoods = () => {
                     </div>
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Food Origin (Country)</span>
+                            <span className="label-text text-neutral">Food Origin (Country)</span>
                         </label>
                         <select id="country" name="foodorigin" placeholder="Select a Food Origin" className='select select-bordered' required>
                             <option value="" disabled selected>Select a Food Origin</option>
@@ -165,7 +165,7 @@ const AddFoods = () => {
 
                 <div className="form-control w-full">
                     <label className="label">
-                        <span className="label-text">Descripsion</span>
+                        <span className="label-text text-neutral">Descripsion</span>
                     </label>
                     <textarea
                         placeholder="ingredients, making procedure, etc. "
@@ -176,7 +176,7 @@ const AddFoods = () => {
                 </div>
 
                 <div className='w-full'>
-                    <button className='bg-primary dark:bg-[#6d1919] text-white font-bold w-full py-2 px-3 my-5 rounded-lg'>Add Item</button>
+                    <button className='bg-primary-content text-primary font-bold w-full py-2 px-3 my-5 rounded-lg'>Add Item</button>
                 </div>
             </form>
         </div>

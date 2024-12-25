@@ -39,15 +39,15 @@ const Gellery = () => {
             </div>
 
 
-            <div className="gallery-page text-center mx-28 my-6">
+            <div className="gallery-page text-center 2xl:mx-32 xl:mx-24 sm:mx-2 my-6">
 
                 {/* গ্যালারি সেকশন */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
+                <div className="grid grid-cols-2 xl:grid-cols-4 lg:grid-cols-3  md:grid-cols-2 gap-4 px-4">
                     {/* ইমেজ ১ */}
                     <img
                         src={image}
                         alt="Gallery Image 1"
-                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
+                        className="rounded-lg w-[450px] 2xl:h-[400px] xl:h-[300px] lg:h-[250px] sm:h-[200px] h-[120px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(0);
                             setOpen(true);
@@ -58,7 +58,7 @@ const Gellery = () => {
                     <img
                         src={image2}
                         alt="Gallery Image 2"
-                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
+                        className="rounded-lg w-[450px] 2xl:h-[400px] xl:h-[300px] lg:h-[250px] sm:h-[200px] h-[120px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(1);
                             setOpen(true);
@@ -69,7 +69,7 @@ const Gellery = () => {
                     <img
                         src={image9}
                         alt="Gallery Image 3"
-                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
+                        className="rounded-lg w-[450px] 2xl:h-[400px] xl:h-[300px] lg:h-[250px] sm:h-[200px] h-[120px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(2);
                             setOpen(true);
@@ -80,7 +80,7 @@ const Gellery = () => {
                     <img
                         src={image4}
                         alt="Gallery Image 4"
-                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
+                        className="rounded-lg w-[450px] 2xl:h-[400px] xl:h-[300px] lg:h-[250px] sm:h-[200px] h-[120px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(3);
                             setOpen(true);
@@ -91,7 +91,7 @@ const Gellery = () => {
                     <img
                         src={image3}
                         alt="Gallery Image 5"
-                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
+                        className="rounded-lg w-[450px] 2xl:h-[400px] xl:h-[300px] lg:h-[250px] sm:h-[200px] h-[120px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(4);
                             setOpen(true);
@@ -102,7 +102,7 @@ const Gellery = () => {
                     <img
                         src={image6}
                         alt="Gallery Image 6"
-                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
+                        className="rounded-lg w-[450px] 2xl:h-[400px] xl:h-[300px] lg:h-[250px] sm:h-[200px] h-[120px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(5);
                             setOpen(true);
@@ -113,7 +113,7 @@ const Gellery = () => {
                     <img
                         src={image7}
                         alt="Gallery Image 7"
-                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
+                        className="rounded-lg w-[450px] 2xl:h-[400px] xl:h-[300px] lg:h-[250px] sm:h-[200px] h-[120px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(6);
                             setOpen(true);
@@ -124,7 +124,7 @@ const Gellery = () => {
                     <img
                         src={image4}
                         alt="Gallery Image 8"
-                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
+                        className="rounded-lg w-[450px] 2xl:h-[400px] xl:h-[300px] lg:h-[250px] sm:h-[200px] h-[120px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(7);
                             setOpen(true);
@@ -135,7 +135,7 @@ const Gellery = () => {
                     <img
                         src={image5}
                         alt="Gallery Image 8"
-                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
+                        className="rounded-lg w-[450px] 2xl:h-[400px] xl:h-[300px] lg:h-[250px] sm:h-[200px] h-[120px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(8);
                             setOpen(true);
@@ -146,7 +146,7 @@ const Gellery = () => {
                     <img
                         src={image10}
                         alt="Gallery Image 8"
-                        className="rounded-lg w-[450px] h-[400px] object-cover  cursor-pointer"
+                        className="rounded-lg w-[450px] 2xl:h-[400px] xl:h-[300px] lg:h-[250px] sm:h-[200px] h-[120px] object-cover  cursor-pointer"
                         onClick={() => {
                             setCurrentIndex(9);
                             setOpen(true);

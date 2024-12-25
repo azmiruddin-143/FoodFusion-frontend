@@ -8,8 +8,8 @@ const MyOrdersTable = ({ myOrder, index,foodDilet }) => {
 
     return (
         <tbody>
-            <tr className='text-center'>
-                <th className='flex justify-center items-center gap-5'>{index + 1}
+            <tr className='text-center text-neutral'>
+                <th className='flex justify-center text-neutral items-center gap-5'>{index + 1}
                     <div className="avatar">
                         <div className="mask mask-squircle h-12 w-12">
                             <img
@@ -18,13 +18,13 @@ const MyOrdersTable = ({ myOrder, index,foodDilet }) => {
                     </div>
                 </th>
 
-                <td>{productName}</td>
-                <td>{category} </td>
-                <td> ${price}</td>
-                <td> {sellerEmail}</td>
-                <td>{foodquantity}</td>
-                <td>{formattedDate}</td>
-                <td>
+                <td className='text-neutral'>{productName}</td>
+                <td className='text-neutral'>{category} </td>
+                <td className='text-neutral'> ${price}</td>
+                <td className='text-neutral'> {sellerEmail}</td>
+                <td className='text-neutral'>{foodquantity}</td>
+                <td className='text-neutral'>{formattedDate}</td>
+                <td className='text-neutral'>
                     <button onClick={() => foodDilet(_id)}>
                         <FaTrashAlt size={16} />
                     </button>

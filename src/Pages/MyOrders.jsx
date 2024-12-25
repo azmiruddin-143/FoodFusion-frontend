@@ -5,12 +5,14 @@ import axios from 'axios';
 import MyOrdersTable from './MyOrdersTable';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
+import useAxiosSecure from '../Axios secure/useAxiosSecure';
 
 const MyOrders = () => {
     const { user } = useContext(AuthContext)
     const [myOrder, setMyOrder] = useState([])
+    const axiosSecure = useAxiosSecure()
     useEffect(() => {
-        axios.get(`http://localhost:5000/purchase/${user?.email}`)
+        axiosSecure.get(`/purchase/${user?.email}`)
             .then(result => {
                 setMyOrder(result.data)
             })
@@ -31,7 +33,7 @@ const MyOrders = () => {
 
             if (result.isConfirmed) {
 
-                axios.delete(`http://localhost:5000/foodpurchase/${id}`)
+                axios.delete(`https://server-food-ochre.vercel.app/foodpurchase/${id}`)
                     .then(result => {
                         if (result.data.deletedCount > 0) {
                             Swal.fire({
@@ -79,7 +81,7 @@ const MyOrders = () => {
                     {
                         myOrder.length > 0 &&
                         <thead>
-                            <tr className='text-lg text-center text-black'>
+                            <tr className='text-lg text-center text-neutral'>
                                 <th></th>
                                 <th>Name</th>
                                 <th>Category</th>
@@ -97,7 +99,7 @@ const MyOrders = () => {
                     {myOrder.length === 0 &&
                         <div className="flex justify-center my-5">
                             <div>
-                                <h1 className='text-4xl py-3'>No Data Found ?</h1>
+                                <h1 className='text-4xl py-3 text-neutral'>No Data Found ?</h1>
                                 <Link to={'/allfoods'} > <button className='py-2 my-3 px-6 bg-primary text-white rounded-md'>Purchase Food</button> </Link>
                             </div>
                         </div>

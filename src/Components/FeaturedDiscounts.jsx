@@ -6,7 +6,7 @@ const FeaturedDiscounts = () => {
     return (
         <div className="grid gap-6 sm:px-4 px-2  sm:my-7 my-5 lg:my-14 xl:my-32 2xl:mx-32 xl:mx-24 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
         {/* Card 1 */}
-        <div className=" bg-primary  text-white py-10 px-5 rounded-lg shadow-md relative">
+        <div className="bg-primary-content  text-primary py-10 px-5 rounded-lg shadow-md relative">
           <div className="absolute top-4 right-4">
             <img
               src={shop}
@@ -23,7 +23,7 @@ const FeaturedDiscounts = () => {
         </div>
   
         {/* Card 2 */}
-        <div className="bg-secondary text-white p-6 rounded-lg shadow-md relative">
+        <div className="bg-neutral text-white p-6 rounded-lg shadow-md relative">
           <div className="absolute top-4 right-4">
             <img
               src={parsent}
