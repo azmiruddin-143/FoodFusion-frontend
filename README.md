@@ -1,8 +1,37 @@
-# React + Vite
+# Assignment Category : 04 
+# Website Name : FoodFusion
+# Website Link : https://foodfusion-4eca3.web.app/
+# Features of FoodFusion Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Dynamic Display
+- Theme Toggle
+- Real-Time Balance
+- Responsive Design
+- Smooth Interactions
+- Category Showcase
+- Dark Mode Support
+- Live Updates
+- Interactive Cards
+- Engaging UI
 
-Currently, two official plugins are available:
+# npm packages have used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- axios
+- firebase
+- localforage
+- match-sorter
+- moment
+- react
+- react-awesome-reveal
+- react-dom
+- react-helmet-async
+- react-icons
+- react-router-dom
+- react-toastify
+- react-tooltip
+- sort-by
+- sweetalert2
+- swiper
+
+# Client Repositories: https://github.com/programming-hero-web-course2/b10a11-client-side-azmiruddin-143
+# Server Repositories: https://github.com/programming-hero-web-course2/b10a11-server-side-azmiruddin-143
