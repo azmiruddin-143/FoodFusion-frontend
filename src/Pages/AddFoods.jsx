@@ -89,7 +89,7 @@ const AddFoods = () => {
                 </div>
             </div>
 
-            <form onSubmit={addFoodsForm} className='max-w-4xl mx-auto my-10' action="">
+            <form onSubmit={addFoodsForm} className='max-w-4xl px-4 lg:px-0 mx-auto my-10' action="">
                 <div className=' sm:flex gap-5'>
                     <div className="form-control w-full">
 

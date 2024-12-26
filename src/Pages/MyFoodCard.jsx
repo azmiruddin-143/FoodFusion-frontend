@@ -50,7 +50,7 @@ const MyFoodCard = ({ myfood, updateFoodList }) => {
 
     };
     return (
-        <div class="max-w-sm mx-auto h-[570px] bg-info border rounded-lg shadow-md overflow-hidden ">
+        <div class="max-w-sm mx-auto sm:h-[570px] bg-info border rounded-lg shadow-md overflow-hidden ">
             <div class="relative">
                 <img
                     src={image}
