@@ -16,7 +16,7 @@ const SingleFood = () => {
     const chek = (e) => {
         e.preventDefault()
         if (sellerEmail === user?.email) {
-            toast.error("Apnar nijer acount diye hobe na", {
+            toast.error("You cannot purchase products added by your own account", {
                 autoClose: 3000,
 
             });
@@ -83,12 +83,40 @@ const SingleFood = () => {
 
                                     </div>
 
-                                    {quantity === 0 && <h1 className='text-red-600'>Not Abilebel quantity</h1>}
-                                    <button disabled={quantity === 0}
-                                        class={`${quantity === 0 ? "bg-[#dddada] text-[#a4a3a3] mt-4 w-5/12 font-semibold py-2 px-4 rounded-md" : 'mt-4 w-5/12 bg-primary-content text-primary font-semibold py-2 px-4 rounded-md'}`}
+                                    {/* {
+                                      quantity < 1 && <h1 className='text-red-600'>Not Abilebel quantity</h1>
+                                    } */}
+
+                                    {
+                                        sellerEmail === user?.email && quantity < 1 ? (
+                                            <h1 className="text-red-600">You cannot buy your own product and quantity is not available</h1>
+                                        ) : sellerEmail === user?.email ? (
+                                            <h1 className="text-red-600">You cannot buy your own product</h1>
+                                        ) : quantity < 1 ? (
+                                            <h1 className="text-red-600">Not Available quantity</h1>
+                                        ) : null
+                                    }
+
+
+
+                                    {/* <button disabled={quantity < 1}
+                                        class={`${quantity < 1 ? "bg-[#dddada] text-[#a4a3a3] mt-4 w-5/12 font-semibold py-2 px-4 rounded-md" : 'mt-4 w-5/12 bg-primary-content text-primary font-semibold py-2 px-4 rounded-md'}`}
+                                    >
+                                        Purchase
+                                    </button> */}
+
+                                    <button
+                                        disabled={sellerEmail === user?.email || quantity < 1 || (sellerEmail === user?.email && quantity < 1)}
+                                        class={`${sellerEmail === user?.email || quantity < 1 || (sellerEmail === user?.email && quantity < 1)
+                                                ? "bg-[#dddada] text-[#a4a3a3] mt-4 w-5/12 font-semibold py-2 px-4 rounded-md"
+                                                : "mt-4 w-5/12 bg-primary-content text-primary font-semibold py-2 px-4 rounded-md"
+                                            }`}
                                     >
                                         Purchase
                                     </button>
+
+
+
                                 </div>
                             </div>
 

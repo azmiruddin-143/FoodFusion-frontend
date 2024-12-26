@@ -189,7 +189,7 @@ const MyFoodCard = ({ myfood, updateFoodList }) => {
 
                                 {/* ... */}
                                 <div className="modal-action">
-                                    <button type="submit" className="btn bg-primary-content text-primary">
+                                    <button type="submit" className="btn hover:bg-primary-content hover:text-primary bg-primary-content text-primary">
                                         Update
                                     </button>
                                 </div>
