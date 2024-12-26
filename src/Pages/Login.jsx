@@ -125,11 +125,12 @@ const Login = () => {
                                     </div>
                                     <div className="form-control mt-3">
                                         <label className="cursor-pointer justify-start gap-4 label">
-                                            <input type="checkbox" name='trams' className="checkbox checkbox-warning" />
+                                            <input type="checkbox" name='trams' className="checkbox checkbox-secondary" />
                                             <span className="label-text">Remember me</span>
 
                                         </label>
                                     </div>
+
 
 
                                 </div>

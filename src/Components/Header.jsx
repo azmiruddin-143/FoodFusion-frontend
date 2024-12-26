@@ -223,7 +223,9 @@ const Header = () => {
                                 </Link>
                             )}
 
-                            <div className="relative flex justify-center items-center group w-[50px] sm:w-[70px] h-[70px]">
+                            {
+                                user &&
+                                <div className="relative flex justify-center items-center group w-[50px] sm:w-[70px] h-[70px]">
 
                                 {
                                     user &&
@@ -282,7 +284,9 @@ const Header = () => {
                                     </div>
                                 }
                             </div>
+                            }
 
+                             {/* ....... */}
                         </div>
                     </div>
                 </div>

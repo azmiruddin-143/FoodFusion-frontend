@@ -6,6 +6,7 @@ import { FaSearchengin } from "react-icons/fa6";
 import { Helmet } from 'react-helmet-async';
 import { Fade } from 'react-awesome-reveal';
 
+
 const AllFoods = () => {
 
     const [allFoods, setAllFoods] = useState([])

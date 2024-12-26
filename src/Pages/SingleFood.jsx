@@ -83,9 +83,7 @@ const SingleFood = () => {
 
                                     </div>
 
-                                    {/* {
-                                      quantity < 1 && <h1 className='text-red-600'>Not Abilebel quantity</h1>
-                                    } */}
+                                    
 
                                     {
                                         sellerEmail === user?.email && quantity < 1 ? (
@@ -99,11 +97,7 @@ const SingleFood = () => {
 
 
 
-                                    {/* <button disabled={quantity < 1}
-                                        class={`${quantity < 1 ? "bg-[#dddada] text-[#a4a3a3] mt-4 w-5/12 font-semibold py-2 px-4 rounded-md" : 'mt-4 w-5/12 bg-primary-content text-primary font-semibold py-2 px-4 rounded-md'}`}
-                                    >
-                                        Purchase
-                                    </button> */}
+                                   
 
                                     <button
                                         disabled={sellerEmail === user?.email || quantity < 1 || (sellerEmail === user?.email && quantity < 1)}
