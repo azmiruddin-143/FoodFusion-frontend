@@ -28,8 +28,8 @@ const OurMission = () => {
             description: "To empower food lovers worldwide by making premium-quality foods accessible to all."}
     ];
     return (
-        <div className="bg-gray-100 sm:py-24 py-5 px-2 sm:px-4 xl:px-28 2xl:px-36">
-            <h2 className="text-3xl font-bold text-center mb-8">Our Mission Infographic</h2>
+        <div className="bg-gray-100 sm:py-20 py-5 px-2 sm:px-4 xl:px-28 2xl:px-36">
+            <h2 className="sm:text-3xl text-xl font-bold text-center sm:mb-16 mb-6">Our Mission Infographic</h2>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                 {data.map((item) => (
                     <div key={item.id} className="bg-white shadow-lg rounded-lg p-6 text-center">
