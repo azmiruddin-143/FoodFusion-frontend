@@ -6,6 +6,7 @@ import TrendingItems from '../Components/TrendingItems';
 import FeaturedDiscounts from '../Components/FeaturedDiscounts';
 import FoodsPerformance from '../Components/FoodsPerformance';
 import { Helmet } from 'react-helmet-async';
+import Faq from '../Components/Faq';
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       <TrendingItems></TrendingItems>
       <FeaturedDiscounts></FeaturedDiscounts>
       <FoodsPerformance></FoodsPerformance>
+      <Faq></Faq>
     </div>
 
   )
