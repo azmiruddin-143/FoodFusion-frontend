@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../src/assets/foods-logo.png'
 import payment from '../../src/assets/foods-payment.png'
-import { FaFacebook, FaInstagramSquare, FaTwitterSquare } from 'react-icons/fa';
+import { FaFacebook, FaInstagramSquare, FaTwitterSquare, FaWhatsapp, FaWhatsappSquare } from 'react-icons/fa';
 import { AiFillTikTok } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
@@ -12,15 +12,12 @@ const Footer = () => {
                 {/* Top Navigation Links */}
                 <div className="flex flex-wrap justify-center md:justify-between items-center border-b border-gray-700 pb-4 mb-4">
                     <img src={logo} alt="Basilico Fastfood Logo" className="sm:w-36 w-20 mb-4 md:mb-0" />
-                    <nav className="flex space-x-6 text-sm font-semibold">
+                    <nav className="flex sm:space-x-6 space-x-2  text-sm font-semibold">
                         <Link to={'/'} className="hover:underline">Home</Link>
                         <Link to={'/allfoods'} className="hover:underline">All Foods</Link>
                         <Link to={'/gallery'} className="hover:underline">Gallery</Link>
-                        <a href="#" className="hover:underline hidden md:block">Careers Offers</a>
-                        <a href="#" className="hover:underline hidden md:block">Blog</a>
-                        <a href="#" className="hover:underline hidden md:block">Contact</a>
-                        <a href="#" className="hover:underline hidden md:block">Gift Voucher</a>
-                        <a href="#" className="hover:underline hidden md:block">FAQs</a>
+                        <Link to={'aboutus'} className="hover:underline">About Us</Link>
+                        <Link to={'contactus'} className="hover:underline">Contact</Link>
                     </nav>
                 </div>
 
@@ -28,8 +25,8 @@ const Footer = () => {
                     {/* Information Section */}
                     <div className="text-center md:text-left">
                         <h4 className="font-bold text-lg mb-4">INFORMATION</h4>
-                        <p>62 Big Tree St, Livonia, New York 14487, USA</p>
-                        <p className="mt-2">customer_support@example.com</p>
+                        <p>Dhaka,Bangladesh, 1440</p>
+                        <p className="mt-2">customer_support: freelancerazmir143@gmail.com</p>
                         <ul className="mt-4 space-y-2">
                             <li><a href="#" className="hover:underline">Terms and Conditions</a></li>
                             <li><a href="#" className="hover:underline">Warranty and Services</a></li>
@@ -40,7 +37,7 @@ const Footer = () => {
                     <div className="text-center">
                         <h4 className="font-bold text-lg mb-4">CONTACT & ORDER</h4>
                         <p>Call Us To Order or Order Online</p>
-                        <p className="text-red-500 text-2xl font-bold mt-2">910-344-7520</p>
+                        <p className="text-red-500 text-2xl font-bold mt-2">+8801933946077</p>
                         <Link to={'/allfoods'}>
                             <button className="bg-secondary text-black font-bold py-2 px-4 mt-4 rounded ">
                                 ORDER ONLINE NOW
@@ -70,10 +67,12 @@ const Footer = () => {
 
                     {/* Social Media Links */}
                     <div className="flex space-x-4 text-3xl">
-                        <FaFacebook />
-                        <FaInstagramSquare />
-                        <FaTwitterSquare />
-                        <AiFillTikTok />
+                    
+                        <Link to={'https://www.facebook.com/azmiruddin143/'} > <FaFacebook /> </Link>
+                        <Link to={'http://wa.me/8801933946077'} > <FaWhatsappSquare /> </Link>
+                        <Link to={'https://x.com/azmiruddin143_'} > <FaTwitterSquare /> </Link>
+                        
+                        {/* <AiFillTikTok /> */}
                     </div>
 
                 </div>

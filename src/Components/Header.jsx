@@ -87,7 +87,7 @@ const Header = () => {
                                     <button onClick={() => setIsDropdownOpen(false)}>
                                         <IoIosCloseCircle className="absolute text-secondary right-0 top-0" size={30} />
                                     </button>
-                                    
+
                                     <NavLink
                                         to="/"
                                         onClick={() => setIsDropdownOpen(false)}
@@ -108,7 +108,7 @@ const Header = () => {
                                                 : ""
                                         }
                                     >
-                                       All Foods
+                                        All Foods
                                     </NavLink>
                                     <NavLink
                                         to="/gallery"
@@ -119,20 +119,44 @@ const Header = () => {
                                                 : ""
                                         }
                                     >
-                                       Gallery
+                                        Gallery
                                     </NavLink>
-                                    
-                                    
+                                    <NavLink
+                                        to="/aboutus"
+                                        onClick={() => setIsDropdownOpen(false)}
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? `${isBlurred ? "text-secondary font-bold border-b border-secondary" : "text-secondary border-b border-secondary"}`
+                                                : ""
+                                        }
+                                    >
+                                        About Us
+                                    </NavLink>
+                                    <NavLink
+                                        to="/contactus"
+                                        onClick={() => setIsDropdownOpen(false)}
+                                        className={({ isActive }) =>
+                                            isActive
+                                                ? `${isBlurred ? "text-secondary font-bold border-b border-secondary" : "text-secondary border-b border-secondary"}`
+                                                : ""
+                                        }
+                                    >
+                                        Contact US
+                                    </NavLink>
+
+
 
 
                                 </ul>
                             )}
                         </div>
-                        <div className='flex items-center gap-0 sm:gap-3'>
-                            <img className={`${isBlurred ? 'sm:w-[60px] w-[40px] rounded-full' : "sm:w-[60px] w-[40px] rounded-full"}`} src={sitelogo} alt="" />
-                            <h1 className={`${isBlurred && "text-secondary font-bold"} sm:text-3xl text-[12px] pl-2 lg:pl-0 lg:text-xl xl:text-3xl text-secondary font-bold`}> FoodFusion
-                            </h1>
-                        </div>
+                        <Link to={'/'} >
+                            <div className='flex items-center gap-0 sm:gap-3'>
+                                <img className={`${isBlurred ? 'sm:w-[60px] w-[40px] rounded-full' : "sm:w-[60px] w-[40px] rounded-full"}`} src={sitelogo} alt="" />
+                                <h1 className={`${isBlurred && "text-secondary font-bold"} sm:text-3xl text-[12px] pl-2 lg:pl-0 lg:text-xl xl:text-3xl text-secondary font-bold`}> FoodFusion
+                                </h1>
+                            </div>
+                        </Link>
                     </div>
 
                     <div className="navbar-center  xl:ml-10 2xl:ml-0 hidden lg:flex">
@@ -247,66 +271,66 @@ const Header = () => {
                                 user &&
                                 <div className="relative flex justify-center items-center group w-[50px] sm:w-[70px] h-[70px]">
 
-                                {
-                                    user &&
-                                    <div className="dropdown dropdown-end">
-                                        <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                            <div className="w-96 rounded-full">
-                                                <img
-                                                    referrerPolicy='no-referrer'
-                                                    // alt="Tailwind CSS Navbar component"
-                                                    src={user?.photoURL}
-                                                    data-tooltip-id="image-tooltip"
-                                                    data-tooltip-content="azmirkhan"
-                                                    style={{ cursor: "pointer" }}
+                                    {
+                                        user &&
+                                        <div className="dropdown dropdown-end">
+                                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                                <div className="w-96 rounded-full">
+                                                    <img
+                                                        referrerPolicy='no-referrer'
+                                                        // alt="Tailwind CSS Navbar component"
+                                                        src={user?.photoURL}
+                                                        data-tooltip-id="image-tooltip"
+                                                        data-tooltip-content="azmirkhan"
+                                                        style={{ cursor: "pointer" }}
 
-                                                />
+                                                    />
 
-                                                <Tooltip id="image-tooltip" place="top" style={{ backgroundColor: "#333" }} />
+                                                    <Tooltip id="image-tooltip" place="top" style={{ backgroundColor: "#333" }} />
+                                                </div>
                                             </div>
+                                            <ul
+                                                tabIndex={0}
+                                                className="menu menu-sm dropdown-content text-neutral bg-primary space-y-3 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+
+                                                <NavLink
+                                                    to="/myfoods"
+                                                    className={({ isActive }) =>
+                                                        isActive
+                                                            ? `${isBlurred ? "text-secondary font-bold border-b" : "text-secondary"}`
+                                                            : ""
+                                                    }
+                                                >
+                                                    My Foods
+                                                </NavLink>
+                                                <NavLink
+                                                    to="/addfood"
+                                                    className={({ isActive }) =>
+                                                        isActive
+                                                            ? `${isBlurred ? "text-secondary font-bold " : "text-secondary font-bold "}`
+                                                            : ""
+                                                    }
+                                                >
+                                                    Add food
+                                                </NavLink>
+                                                <NavLink
+                                                    to="/myorders"
+                                                    className={({ isActive }) =>
+                                                        isActive
+                                                            ? `${isBlurred ? "text-secondary font-bold" : "text-secondary"}`
+                                                            : ""
+                                                    }
+                                                >
+                                                    My Orders
+                                                </NavLink>
+
+                                            </ul>
                                         </div>
-                                        <ul
-                                            tabIndex={0}
-                                            className="menu menu-sm dropdown-content text-neutral bg-primary space-y-3 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-
-                                            <NavLink
-                                                to="/myfoods"
-                                                className={({ isActive }) =>
-                                                    isActive
-                                                        ? `${isBlurred ? "text-secondary font-bold border-b" : "text-secondary"}`
-                                                        : ""
-                                                }
-                                            >
-                                                My Foods
-                                            </NavLink>
-                                            <NavLink
-                                                to="/addfood"
-                                                className={({ isActive }) =>
-                                                    isActive
-                                                        ? `${isBlurred ? "text-secondary font-bold " : "text-secondary font-bold "}`
-                                                        : ""
-                                                }
-                                            >
-                                                Add food
-                                            </NavLink>
-                                            <NavLink
-                                                to="/myorders"
-                                                className={({ isActive }) =>
-                                                    isActive
-                                                        ? `${isBlurred ? "text-secondary font-bold" : "text-secondary"}`
-                                                        : ""
-                                                }
-                                            >
-                                                My Orders
-                                            </NavLink>
-
-                                        </ul>
-                                    </div>
-                                }
-                            </div>
+                                    }
+                                </div>
                             }
 
-                             {/* ....... */}
+                            {/* ....... */}
                         </div>
                     </div>
                 </div>

@@ -3,6 +3,7 @@ import shop from '../../src/assets/shop-discount.png'
 import parsent from '../../src/assets/parsent-discount.png'
 import barger from '../../src/assets/barger-discount.png'
 import { Fade } from 'react-awesome-reveal';
+import { Link } from 'react-router-dom';
 const FeaturedDiscounts = () => {
     return (
       <Fade duration={3000} triggerOnce >
@@ -21,7 +22,7 @@ const FeaturedDiscounts = () => {
             Give gift vouchers to your friends and relatives to enjoy our fast
             food, Nunc id ullamcorper.
           </p>
-           <button>BUY GIFT NOW →</button>
+           <Link to={'/allfoods'} ><button>BUY GIFT NOW →</button></Link>
         </div>
   
         {/* Card 2 */}
@@ -38,7 +39,7 @@ const FeaturedDiscounts = () => {
             20% discount on first order, Nam ut augue pulvinar turpis malesuada
             condimentum.
           </p>
-          <button className='text-primary'>BUY GIFT NOW →</button>
+          <Link to={'/allfoods'} ><button>BUY GIFT NOW →</button></Link>
         </div>
   
         {/* Card 3 */}
@@ -56,7 +57,7 @@ const FeaturedDiscounts = () => {
             dolor iaculis!
           </p>
          
-            <button className='text-white'>BUY GIFT NOW →</button>
+          <Link to={'/allfoods'} ><button>BUY GIFT NOW →</button></Link>
           
         </div>
       </div>

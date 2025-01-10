@@ -46,7 +46,7 @@ const Faq = () => {
     ];
 
     return (
-        <div className='bg-[#fafafa] sm:py-24 py-10 '>
+        <div className='bg-[#fafafa]  2xl:mt-44 xl:mt-40 lg:mt-32 sm:mt-14 mt-5 sm:py-24 py-10 '>
             <div className='lg:flex items-center border lg:mx-5 2xl:mx-36 rounded-md xl:mx-28'>
                 <div className='flex-1'>
                     <img className='2xl:w-10/12' src={faqImage} alt="" />

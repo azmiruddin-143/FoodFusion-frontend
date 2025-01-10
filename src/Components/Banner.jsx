@@ -25,7 +25,7 @@ const Banner = () => {
                 effect="fade"
                 slidesPerView={1}
                 loop={true}
-                className="2xl:h-[850px] md:h-[450px] lg:h-[600px] sm:h-[400px] h-[350px]"
+                className="2xl:h-[650px] md:h-[450px] lg:h-[600px] sm:h-[400px] h-[350px]"
                 pagination={{
                     clickable: true,
                     renderBullet: (index, className) => {
