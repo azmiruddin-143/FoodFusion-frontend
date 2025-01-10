@@ -22,6 +22,7 @@ import PrivateRoot from './Components/PrivateRoot';
 import { HelmetProvider } from 'react-helmet-async';
 import Error from './Components/Error';
 import ContactUs from './Pages/ContactUs';
+import AboutUS from './Pages/AboutUS';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -69,13 +70,18 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>
+      },
+      {
+        path:"aboutus",
+        element: <AboutUS></AboutUS>
+      },
+      {
+        path:"contactus",
+        element: <ContactUs></ContactUs>
       }
     ]
   },
-  {
-    path:"contactus",
-    element: <ContactUs></ContactUs>
-  }
+  
 ]);
 
 createRoot(document.getElementById('root')).render(

@@ -167,6 +167,26 @@ const Header = () => {
                             >
                                 Gallery
                             </NavLink>
+                            <NavLink
+                                to="/aboutus"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? `${isBlurred ? "text-secondary font-bold border-b border-secondary" : "text-secondary border-b border-secondary"}`
+                                        : ""
+                                }
+                            >
+                                About Us
+                            </NavLink>
+                            <NavLink
+                                to="/contactus"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? `${isBlurred ? "text-secondary font-bold border-b border-secondary" : "text-secondary border-b border-secondary"}`
+                                        : ""
+                                }
+                            >
+                                Contact Us
+                            </NavLink>
 
 
                         </ul>
