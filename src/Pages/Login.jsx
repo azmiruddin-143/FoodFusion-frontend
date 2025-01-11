@@ -7,6 +7,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Auth Provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import { Fade } from 'react-awesome-reveal';
+import { FaLeftLong } from 'react-icons/fa6';
 
 const Login = () => {
 
@@ -91,7 +92,8 @@ const Login = () => {
                 <Helmet>
                     <title>FoodFusion| Login </title>
                 </Helmet>
-                <div className="sm:my-10 my-5 ">
+                <div className="sm:mt-20 xl:mt-24 2xl:mt-40 my-5 ">
+                    <Link to={'/'} ><button className='text-lg flex items-center gap-4 py-2 px-4 bg-primary-content rounded-md mx-auto text-white'> <FaLeftLong></FaLeftLong>  Home Page</button></Link>
                     <div className="hero-content flex-col mx-auto lg:flex-row-reverse">
                         <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
                             <form onSubmit={loginForm} className="card-body">

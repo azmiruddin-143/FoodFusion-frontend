@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../Auth Provider/AuthProvider';
 import { Fade } from 'react-awesome-reveal';
+import { FaLeftLong } from 'react-icons/fa6';
 
 const Register = () => {
     // User Register//
@@ -120,6 +121,7 @@ const Register = () => {
               <title>FoodFusion | Register</title>
             </Helmet>
             <div className="sm:my-10 my-5 ">
+                <Link to={'/'} ><button className='text-lg flex items-center gap-4 py-2 px-4 bg-primary-content rounded-md mx-auto text-white'> <FaLeftLong></FaLeftLong>  Home Page</button></Link>
                 <div className="hero-content flex-col mx-auto lg:flex-row-reverse">
                     <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
                         <form onSubmit={registerForm} className="card-body">

@@ -28,7 +28,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="max-w-7xl lg:mx-auto gap-10 px-2 lg:px-8 items-center sm:my-14 my-5 flex flex-col lg:flex-row">
+        <div className="max-w-7xl lg:mx-auto gap-10 px-2 lg:px-8 items-center sm:my-16 xl:my-24 my-5 flex flex-col lg:flex-row">
             {/* Left Section */}
 
             {/* Left Section */}

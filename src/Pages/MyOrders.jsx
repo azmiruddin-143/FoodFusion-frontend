@@ -103,7 +103,7 @@ const MyOrders = () => {
                     }
 
                     {myOrder.length === 0 &&
-                        <div className="flex justify-center my-5">
+                        <div className="flex h-screen justify-center my-5">
                             <div>
                                 <h1 className='text-4xl py-3 text-neutral'>No Data Found ?</h1>
                                 <Link to={'/allfoods'} > <button className='py-2 my-3 px-6 bg-primary-content text-primary rounded-md'>Purchase Food</button> </Link>

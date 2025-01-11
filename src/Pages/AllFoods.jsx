@@ -114,7 +114,7 @@ const AllFoods = () => {
 
                 {
                     allFoods.length === 0 ?
-                        <h1 className='sm:text-3xl lg:text-5xl text-center py-7 mx-auto text-neutral lg:pr-52'>No Data Found ?</h1>
+                        <h1 className='sm:text-3xl h-screen lg:text-5xl text-center py-7 mx-auto text-neutral lg:pr-52'>No Data Found ?</h1>
                         :
                         <div>
 
