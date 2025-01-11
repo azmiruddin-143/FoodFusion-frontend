@@ -7,6 +7,7 @@ import FeaturedDiscounts from '../Components/FeaturedDiscounts';
 import FoodsPerformance from '../Components/FoodsPerformance';
 import { Helmet } from 'react-helmet-async';
 import Faq from '../Components/Faq';
+import BackToTop from '../Components/NewComponents/BackToTop';
 
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
       <FeaturedDiscounts></FeaturedDiscounts>
       <FoodsPerformance></FoodsPerformance>
       <Faq></Faq>
+      <BackToTop></BackToTop>
     </div>
 
   )

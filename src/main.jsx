@@ -63,14 +63,7 @@ const router = createBrowserRouter([
         path: "/myorders",
         element: <PrivateRoot><MyOrders></MyOrders></PrivateRoot>
       },
-      {
-        path: "/login",
-        element: <Login></Login>
-      },
-      {
-        path: "/register",
-        element: <Register></Register>
-      },
+    
       {
         path:"aboutus",
         element: <AboutUS></AboutUS>
@@ -80,6 +73,14 @@ const router = createBrowserRouter([
         element: <ContactUs></ContactUs>
       }
     ]
+  },
+  {
+    path: "/login",
+    element: <Login></Login>
+  },
+  {
+    path: "/register",
+    element: <Register></Register>
   },
   
 ]);

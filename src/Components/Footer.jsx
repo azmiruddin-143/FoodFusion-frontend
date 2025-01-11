@@ -57,7 +57,7 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-gray-700 mt-8 pt-4 flex flex-col md:flex-row justify-between items-center">
-                    <p className="mt-4 md:mt-0 text-gray-400 text-sm">&copy; Copyright © 2024 FoodFusion. All Right Reserved</p>
+                    <p className="mt-4 md:mt-0 text-gray-400 text-sm">&copy; Copyright © 2025 FoodFusion. All Right Reserved</p>
 
 
                     {/* Payment Methods */}
