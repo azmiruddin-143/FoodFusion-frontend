@@ -27,22 +27,7 @@ const Faq = () => {
             question: "How can I keep bread fresh for a longer time?",
             answer: "Store bread in a bread box at room temperature, or freeze it to maintain freshness."
         },
-        // {
-        //     question: "What is the best way to marinate meat for grilling?",
-        //     answer: "Marinate meat in a mixture of oil, acid (like lemon or vinegar), and seasonings for at least 2-4 hours before grilling."
-        // },
-        // {
-        //     question: "How do I properly store spices to keep them fresh?",
-        //     answer: "Store spices in a cool, dark place in airtight containers to preserve their flavor and aroma."
-        // },
-        // {
-        //     question: "What are some tips for reducing food waste at home?",
-        //     answer: "Plan meals ahead, store leftovers properly, and compost food scraps to minimize waste."
-        // },
-        // {
-        //     question: "How can I safely defrost frozen food?",
-        //     answer: "Defrost frozen food in the refrigerator, cold water, or microwave, depending on the time available."
-        // },
+        
     ];
 
     return (
