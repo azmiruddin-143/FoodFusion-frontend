@@ -6,7 +6,7 @@ Welcome to **FoodFusion**, where you can explore, post, and discover an extensiv
 🔗 **Live Site:** [FoodFusion](https://foodfusion-4eca3.web.app/)  
 
 ## 📸 Screenshot  
-![FoodFusion Screenshot](https://i.ibb.co.com/k2qJHRV3)
+![FoodFusion Screenshot](https://i.ibb.co.com/Lz3NHytz/Fusion.jpg)
 
 ## 🛠 Technologies Used  
 - **Frontend:** React, Tailwind CSS  
@@ -26,8 +26,6 @@ Welcome to **FoodFusion**, where you can explore, post, and discover an extensiv
 ✅ **Live Updates:** Instant addition of new items  
 ✅ **Engaging UI:** Visually appealing design for a great user experience  
 
-## 📸 Screenshots
-![FoodFusion Preview](#) *(Replace with an actual screenshot)*
 
 ## 📦 Dependencies
 ```json
