@@ -1,6 +1,6 @@
 # 🍽️ FoodFusion
 
-Welcome to **FoodFusion**, where you can explore, post, and discover an extensive range of delicious foods! Our platform is designed for food lovers, chefs, and anyone passionate about culinary delights. 
+Welcome to **FoodFusion**, Explore, update, and purchase a wide variety of food products with ease! Our platform allows you to not only browse through an extensive catalog of food items but also post new products and update existing ones as your inventory evolves. You can manage your food expenses in real-time, ensuring a seamless shopping and tracking experience. 
 
 ## 🚀 Live Demo  
 🔗 **Live Site:** [FoodFusion](https://foodfusion-4eca3.web.app/)  
@@ -9,8 +9,8 @@ Welcome to **FoodFusion**, where you can explore, post, and discover an extensiv
 ![FoodFusion Screenshot](https://i.ibb.co.com/Lz3NHytz/Fusion.jpg)
 
 ## 🛠 Technologies Used  
-- **Frontend:** React, Tailwind CSS  
-- **Backend:** Firebase  
+- **Frontend:** React, Firebase, Tailwind CSS, css, Npm-package, daisyui 
+- **Backend:** Nodejs, Mongodb, Expressjs, Jwt-token  
 - **Routing:** React Router  
 - **State Management:** LocalForage  
 - **Animations:** React Awesome Reveal  
@@ -71,8 +71,8 @@ Welcome to **FoodFusion**, where you can explore, post, and discover an extensiv
 http://localhost:3000``` *(or as indicated in the terminal)*
 
 ## 📚 Additional Resources
-- **API Documentation:** [Link if available]
-- **Project Report:** [Link if available]
+- **API Documentation:** [Coming Soon]
+- **Project Report:** [Coming Soon]
 - **Live Demo:**https://foodfusion-4eca3.web.app/
 
 ---
