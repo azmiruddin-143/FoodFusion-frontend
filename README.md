@@ -1,47 +1,53 @@
-# FoodFusion 🍽️
+# 🍽️ FoodFusion
 
-Welcome to **FoodFusion**, where you can explore, post, and discover an extensive range of delicious foods! Our platform is designed for food lovers, chefs, and anyone passionate about culinary delights.
+Welcome to **FoodFusion**, where you can explore, post, and discover an extensive range of delicious foods! Our platform is designed for food lovers, chefs, and anyone passionate about culinary delights. 
 
-## 🌐 Live Demo
-### https://foodfusion-4eca3.web.app/
+## 🚀 Live Demo  
+🔗 **Live Site:** [FoodFusion](https://foodfusion-4eca3.web.app/)  
 
-## 🚀 Technologies Used
-- **Frontend**: React, Tailwind CSS
-- **Backend**: Firebase (for authentication and database)
-- **Libraries**: Axios, React Router, React Icons, Swiper, SweetAlert2, React Toastify
+## 📸 Screenshot  
+![FoodFusion Screenshot](https://i.ibb.co.com/k2qJHRV3)
 
-## ✨ Features
-- **Dynamic Display**: Interactive UI for a seamless user experience.
-- **Theme Toggle**: Light and dark mode support.
-- **Real-Time Balance**: Display live user balances.
-- **Responsive Design**: Mobile-friendly and optimized for different screens.
-- **Smooth Interactions**: Animated and visually appealing UI components.
-- **Category Showcase**: Organized food categories for easy browsing.
-- **Live Updates**: Automatic updates when new content is added.
-- **Interactive Cards**: Engaging UI elements for better user interaction.
+## 🛠 Technologies Used  
+- **Frontend:** React, Tailwind CSS  
+- **Backend:** Firebase  
+- **Routing:** React Router  
+- **State Management:** LocalForage  
+- **Animations:** React Awesome Reveal  
+- **Utilities:** Axios, Moment.js, Sort-By  
+
+## ✨ Features  
+✅ **Dynamic Display:** Real-time updates and interactive UI  
+✅ **Theme Toggle:** Dark mode support for better accessibility  
+✅ **Real-Time Balance:** Track food expenses with real-time updates  
+✅ **Responsive Design:** Fully mobile-friendly experience  
+✅ **Category Showcase:** Filter and browse food categories easily  
+✅ **Interactive Cards:** Smooth hover effects and animations  
+✅ **Live Updates:** Instant addition of new items  
+✅ **Engaging UI:** Visually appealing design for a great user experience  
 
 ## 📸 Screenshots
 ![FoodFusion Preview](#) *(Replace with an actual screenshot)*
 
 ## 📦 Dependencies
 ```json
-"dependencies": {
-  "axios": "^x.x.x",
-  "firebase": "^x.x.x",
-  "localforage": "^x.x.x",
-  "match-sorter": "^x.x.x",
-  "moment": "^x.x.x",
-  "react": "^x.x.x",
-  "react-awesome-reveal": "^x.x.x",
-  "react-dom": "^x.x.x",
-  "react-helmet-async": "^x.x.x",
-  "react-icons": "^x.x.x",
-  "react-router-dom": "^x.x.x",
-  "react-toastify": "^x.x.x",
-  "react-tooltip": "^x.x.x",
-  "sort-by": "^x.x.x",
-  "sweetalert2": "^x.x.x",
-  "swiper": "^x.x.x"
+{
+  "axios": "^1.7.9",
+  "firebase": "^11.1.0",
+  "localforage": "^1.10.0",
+  "match-sorter": "^8.0.0",
+  "moment": "^2.30.1",
+  "react": "^18.3.1",
+  "react-awesome-reveal": "^4.3.1",
+  "react-dom": "^18.3.1",
+  "react-helmet-async": "^2.0.5",
+  "react-icons": "^5.4.0",
+  "react-router-dom": "^7.1.0",
+  "react-toastify": "^11.0.2",
+  "react-tooltip": "^5.28.0",
+  "sort-by": "^1.2.0",
+  "sweetalert2": "^11.15.3",
+  "swiper": "^11.1.15"
 }
 ```
 
