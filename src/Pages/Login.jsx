@@ -123,7 +123,7 @@ const Login = () => {
                                     <span className="text-gray-600">Remember me</span>
                                 </div>
 
-                                <button className="w-full bg-primary-content text-white py-2 rounded-lg hover:bg-primary">
+                                <button className="w-full bg-primary-content text-white py-2 rounded-lg ">
                                     Login
                                 </button>
 

@@ -150,7 +150,7 @@ const Register = () => {
                                     <input type="checkbox" name="terms" className="mr-2" />
                                     <span className="text-gray-600">Agree to terms</span>
                                 </div>
-                                <button type="submit" className="w-full bg-primary-content text-white py-2 rounded-lg hover:bg-primary">
+                                <button type="submit" className="w-full bg-primary-content text-white py-2 rounded-lg ">
                                     Register
                                 </button>
                                 <div className="text-center my-4 text-gray-600">OR</div>
