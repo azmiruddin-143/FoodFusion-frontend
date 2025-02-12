@@ -11,8 +11,8 @@ import { Fade } from 'react-awesome-reveal';
 const TrendingItems = () => {
     return (
         <Fade duration={3000} triggerOnce >
-        <div className='my-10 text-center'>
-            <div className="lg:py-20 m-0 p-0">
+        <div className='my-0 text-center'>
+            <div className="lg:py-10 sm:my-8 xl:my-16 my-5 p-0">
                 <Swiper
                     modules={[Navigation, Autoplay]}
                     navigation={false}

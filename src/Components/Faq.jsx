@@ -31,7 +31,7 @@ const Faq = () => {
     ];
 
     return (
-        <div className='2xl:mt-44 xl:mt-40 lg:mt-32 sm:mt-14 mt-5 sm:py-24 py-10 '>
+        <div className='my-16'>
             <div className='lg:flex items-center lg:mx-0 2xl:mx-24 rounded-md xl:mx-16'>
                 <div className='flex-1'>
                     <img className='2xl:w-10/12' src={faqImage} alt="" />

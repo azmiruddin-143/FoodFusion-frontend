@@ -1,14 +1,14 @@
 import React from 'react';
 import logo from '../../src/assets/foods-logo.png'
 import payment from '../../src/assets/foods-payment.png'
-import { FaFacebook, FaInstagramSquare, FaTwitterSquare, FaWhatsapp, FaWhatsappSquare } from 'react-icons/fa';
+import { FaFacebook, FaInstagramSquare, FaLinkedin, FaTwitterSquare, FaWhatsapp, FaWhatsappSquare } from 'react-icons/fa';
 import { AiFillTikTok } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <footer className="bg-black text-white py-8">
-            <div className="2xl:mx-28 xl:mx-24 lg:mx-5  px-4">
+            <div className="2xl:mx-32 xl:mx-24 lg:mx-5  px-4">
                 {/* Top Navigation Links */}
                 <div className="flex flex-wrap justify-center md:justify-between items-center border-b border-gray-700 pb-4 mb-4">
                     <img src={logo} alt="Basilico Fastfood Logo" className="sm:w-36 w-20 mb-4 md:mb-0" />
@@ -68,9 +68,10 @@ const Footer = () => {
                     {/* Social Media Links */}
                     <div className="flex space-x-4 text-3xl">
                     
+                        <Link to={'https://www.linkedin.com/in/azmiruddin05/'} > <FaLinkedin /> </Link>
                         <Link to={'https://www.facebook.com/azmiruddin143/'} > <FaFacebook /> </Link>
                         <Link to={'http://wa.me/8801933946077'} > <FaWhatsappSquare /> </Link>
-                        <Link to={'https://x.com/azmiruddin143_'} > <FaTwitterSquare /> </Link>
+
                         
                         {/* <AiFillTikTok /> */}
                     </div>

@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 const ComboOffers = () => {
   return (
     <Fade duration={3000} triggerOnce >
-      <div className="bg-[#fef6f0] xl:my-20 2xl:my-28 lg:my-16 md:my-16 my-5  lg:py-28 sm:py-14 py-6">
-        <div className="xl:mx-28 2xl:mx-32  lg:mx-5 px-4">
+      <div className="bg-[#fef6f0] ">
+        <div className="xl:mx-28 2xl:mx-32 py-10 lg:mx-5 px-4 sm:my-8 xl:my-16"> 
           {/* Header */}
           <div className="text-center">
             <p className="text-[#f26026] font-semibold">
