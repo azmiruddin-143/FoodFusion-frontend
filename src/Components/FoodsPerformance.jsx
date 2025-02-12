@@ -4,7 +4,7 @@ import { Fade } from 'react-awesome-reveal';
 const FoodsPerformance = () => {
     return (
         <div className="bg-gray-800 2xl:my-44 xl:my-40 lg:my-32 sm:my-14 my-5  text-white py-16">
-        <div className=" mx-auto grid  md:grid-cols-4 gap-11 md:gap-16 items-center text-center space-x-4">
+        <div className=" mx-auto grid xl:mx-5  md:grid-cols-4 gap-11 md:gap-16 items-center text-center space-x-4">
           {/* Single Stat */}
           <Fade duration={2000} triggerOnce >
           <div className="flex-1 border-r-2">

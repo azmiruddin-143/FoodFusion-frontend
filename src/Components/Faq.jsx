@@ -31,13 +31,13 @@ const Faq = () => {
     ];
 
     return (
-        <div className='bg-[#fafafa]  2xl:mt-44 xl:mt-40 lg:mt-32 sm:mt-14 mt-5 sm:py-24 py-10 '>
-            <div className='lg:flex items-center border lg:mx-5 2xl:mx-36 rounded-md xl:mx-28'>
+        <div className='2xl:mt-44 xl:mt-40 lg:mt-32 sm:mt-14 mt-5 sm:py-24 py-10 '>
+            <div className='lg:flex items-center lg:mx-0 2xl:mx-24 rounded-md xl:mx-16'>
                 <div className='flex-1'>
                     <img className='2xl:w-10/12' src={faqImage} alt="" />
                 </div>
 
-                <div className="p-4 max-w-7xl mx-auto lg:w-[50%] xl:mr-14 lg:mr-7">
+                <div className="p-4 max-w-7xl mx-auto lg:w-[50%] xl:mr-10 2xl:mr-8 lg:mr-7">
                     <h2 className="sm:text-4xl text-2xl font-bold sm:my-10 my-4 text-center">Frequently Asked Questions</h2>
                     {faqs.map((faq, index) => (
                         <Disclosure key={index}>
