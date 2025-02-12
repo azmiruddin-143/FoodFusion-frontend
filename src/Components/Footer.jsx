@@ -72,7 +72,6 @@ const Footer = () => {
                         <Link to={'https://www.facebook.com/azmiruddin143/'} > <FaFacebook /> </Link>
                         <Link to={'http://wa.me/8801933946077'} > <FaWhatsappSquare /> </Link>
 
-                        
                         {/* <AiFillTikTok /> */}
                     </div>
 
