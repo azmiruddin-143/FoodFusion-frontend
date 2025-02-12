@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-import google from "../../src/assets/google-icon.png"
+import google from "../../src/assets/google-icon.png";
+import registerImage from "../../src/assets/Sign up-pana.png";
 import { IoEyeOff, IoEye } from "react-icons/io5";
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -10,179 +11,167 @@ import { Fade } from 'react-awesome-reveal';
 import { FaLeftLong } from 'react-icons/fa6';
 
 const Register = () => {
-    // User Register//
-    
-    const { registerUser, myProfileUpdate, googleRegister, setuser } = useContext(AuthContext)
-    const [show, setHide] = useState(false)
-    const navigate = useNavigate()
+    const { registerUser, myProfileUpdate, googleRegister, setuser } = useContext(AuthContext);
+    const [show, setShow] = useState(false);
+    const navigate = useNavigate();
 
     const eyeIconHandler = () => {
-        setHide(!show)
-    }
+        setShow(!show);
+    };
 
     const registerForm = (event) => {
-        event.preventDefault()
-        const trams = event.target.trams.checked
-        const name = event.target.name.value
-        const photourl = event.target.photourl.value
-        const email = event.target.email.value
-        const password = event.target.password.value
-    
-        if (!/[A-Z]/.test(password)) {
-            toast.error("Must have an Uppercase letter in the password ", {
-                autoClose: 3000,
+        event.preventDefault();
+        const terms = event.target.terms.checked;
+        const name = event.target.name.value;
+        const photourl = event.target.photourl.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
 
-            });
-            return
+        if (!/[A-Z]/.test(password)) {
+            toast.error("Password must contain an uppercase letter", { autoClose: 3000 });
+            return;
         }
         if (!/[a-z]/.test(password)) {
-            toast.error("Must have a Lowercase letter in the password  ", {
-                autoClose: 3000,
-
-            });
-            return
+            toast.error("Password must contain a lowercase letter", { autoClose: 3000 });
+            return;
         }
-
         if (password.length < 6) {
-            toast.error("Password must be at least 6 characters", {
-                autoClose: 3000,
-
-            });
-            return
+            toast.error("Password must be at least 6 characters", { autoClose: 3000 });
+            return;
         }
-
-
-        if (!trams) {
-            toast.error("terms not checked ", {
-                autoClose: 3000,
-
-            });
-            return
+        if (!terms) {
+            toast.error("Please agree to the terms", { autoClose: 3000 });
+            return;
         }
 
         registerUser(email, password)
             .then((result) => {
-                const user = result.user
-                setuser(user)
-                navigate("/")
-                // update Profile//
+                const user = result.user;
+                setuser(user);
+                // Update Profile with name and photoURL
                 myProfileUpdate({ displayName: name, photoURL: photourl })
                     .then(() => {
-
-                        setuser({ ...result.user, displayName: name, photoURL: photourl })
-
-                        toast.success("Registration successful!", {
-                            autoClose: 3000,
-                        });
+                        setuser({ ...result.user, displayName: name, photoURL: photourl });
+                        toast.success("Registration successful!", { autoClose: 3000 });
                         event.target.reset();
+                        navigate("/");
                     })
                     .catch((error) => {
-                        toast.error(`Registration failed: ${error.message}`, {
-                            autoClose: 3000,
-                        });
-                    })
-
+                        toast.error(`Registration failed: ${error.message}`, { autoClose: 3000 });
+                    });
             })
-
-
-
             .catch((error) => {
-                toast.error(`Registration failed: ${error.message}`, {
-                    autoClose: 3000,
-                });
-            })
-
-
-    }
+                toast.error(`Registration failed: ${error.message}`, { autoClose: 3000 });
+            });
+    };
 
     const googleRegisterHandler = () => {
         googleRegister()
             .then((result) => {
-                const user = result.user
-                setuser(user)
-                navigate("/")
-                toast.success("Registration successful!", {
-                    autoClose: 3000,
-                });
+                const user = result.user;
+                setuser(user);
+                toast.success("Registration successful!", { autoClose: 3000 });
+                navigate("/");
             })
             .catch((error) => {
-                toast.error(`Registration failed: ${error.message}`, {
-                    autoClose: 3000,
-                });
-            })
-    }
-
-
+                toast.error(`Registration failed: ${error.message}`, { autoClose: 3000 });
+            });
+    };
 
     return (
-         <Fade duration={3000} triggerOnce >
-        <div>
-            <Helmet>
-              <title>FoodFusion | Register</title>
-            </Helmet>
-            <div className="sm:my-10 my-5 ">
-                <Link to={'/'} ><button className='text-lg flex items-center gap-4 py-2 px-4 bg-primary-content rounded-md mx-auto text-white'> <FaLeftLong></FaLeftLong>  Home Page</button></Link>
-                <div className="hero-content flex-col mx-auto lg:flex-row-reverse">
-                    <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
-                        <form onSubmit={registerForm} className="card-body">
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Name</span>
-                                </label>
-                                <input type="text" name='name' placeholder="Enter your name" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Photourl</span>
-                                </label>
-                                <input type="text" name='photourl' placeholder="Enter your photourl" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Email</span>
-                                </label>
-                                <input type="email" name='email' placeholder="Enter your email" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control relative">
-                                <label className="label">
-                                    <span className="label-text">Password</span>
-                                </label>
-                                <input type={`${show ? "text" : "password"}`} name='password' placeholder=" Enter your name password" className="input input-bordered" required />
-
-
-                                <div onClick={eyeIconHandler}>
-                                    {
-                                        !show ? <IoEyeOff className='absolute right-6 top-[50px]' size={20} /> :
-                                            <IoEye className='absolute right-6 top-[50px]' size={20} />
-                                    }
-
+        <Fade duration={3000} triggerOnce>
+            <div className="min-h-screen flex items-center justify-center bg-gray-100">
+                <Helmet>
+                    <title>FoodFusion | Register</title>
+                </Helmet>
+                {/* Main Container: Two sections without any gap */}
+                <div className="flex flex-col md:flex-row w-full max-w-5xl gap-0">
+                    {/* Left Side - Register Image */}
+                    <div className="hidden md:flex md:w-1/2 items-center justify-center">
+                        <img
+                            className="w-full h-full object-cover"
+                            src={registerImage}
+                            alt="Register Illustration"
+                        />
+                    </div>
+                    {/* Right Side - Registration Form */}
+                    <div className="flex flex-col md:w-1/2 items-center justify-center">
+                        <Link to="/">
+                            <button className="text-lg flex items-center gap-2 py-2 px-4 bg-primary-content rounded-md text-white mb-5">
+                                <FaLeftLong /> Home Page
+                            </button>
+                        </Link>
+                        <div className="bg-white p-8 shadow-lg rounded-lg w-full max-w-md">
+                            <form onSubmit={registerForm}>
+                                <div className="mb-4">
+                                    <label className="block text-gray-700">Name</label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        placeholder="Enter your name"
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                                        required
+                                    />
                                 </div>
-                                <div className="form-control mt-3">
-                                    <label className="cursor-pointer justify-start gap-4 label">
-                                        <input type="checkbox" name='trams' className="checkbox checkbox-secondary" />
-                                        <span className="label-text">Remember me</span>
-
-                                    </label>
+                                <div className="mb-4">
+                                    <label className="block text-gray-700">Photo URL</label>
+                                    <input
+                                        type="text"
+                                        name="photourl"
+                                        placeholder="Enter your photo URL"
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                                        required
+                                    />
                                 </div>
-
-
-                            </div>
-                            <div className="form-control mt-6">
-                                <button className="btn bg-primary-content hover:bg-primary-content text-primary">Register</button>
-                            </div>
-
-                            <div className="divider">OR</div>
-                            <div onClick={googleRegisterHandler} className='mx-auto flex items-center my-3 gap-3 border py-2 px-4'>
-                                <img className='w-[30px]' src={google} alt="" />
-                                <h1>Sign in with Google</h1>
-                            </div>
-                            <h1 className='text-lg text-center'>Already a user ? <Link to="/login" className='text-[#e3ab61]'>Login</Link></h1>
-                        </form>
-
+                                <div className="mb-4">
+                                    <label className="block text-gray-700">Email</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="Enter your email"
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                                        required
+                                    />
+                                </div>
+                                <div className="mb-4 relative">
+                                    <label className="block text-gray-700">Password</label>
+                                    <input
+                                        type={show ? "text" : "password"}
+                                        name="password"
+                                        placeholder="Enter your password"
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                                        required
+                                    />
+                                    <div onClick={eyeIconHandler} className="absolute top-10 right-4 cursor-pointer">
+                                        {show ? <IoEye size={20} /> : <IoEyeOff size={20} />}
+                                    </div>
+                                </div>
+                                <div className="flex items-center mb-4">
+                                    <input type="checkbox" name="terms" className="mr-2" />
+                                    <span className="text-gray-600">Agree to terms</span>
+                                </div>
+                                <button type="submit" className="w-full bg-primary-content text-white py-2 rounded-lg hover:bg-primary">
+                                    Register
+                                </button>
+                                <div className="text-center my-4 text-gray-600">OR</div>
+                                <div
+                                    onClick={googleRegisterHandler}
+                                    className="flex items-center justify-center gap-3 border py-2 px-4 rounded-lg cursor-pointer hover:bg-gray-100"
+                                >
+                                    <img className="w-[30px]" src={google} alt="Google Icon" />
+                                    <span>Sign in with Google</span>
+                                </div>
+                                <p className="text-center mt-4 text-gray-600">
+                                    Already a user?{" "}
+                                    <Link to="/login" className="text-[#e3ab61]">
+                                        Login
+                                    </Link>
+                                </p>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </Fade>
     );
 };

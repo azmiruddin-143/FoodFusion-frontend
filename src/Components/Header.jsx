@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from '../Auth Provider/AuthProvider';
 import ToggleTeme from './ToggleTeme';
+import { FaUserCircle } from 'react-icons/fa';
 
 
 const Header = () => {
@@ -268,7 +269,7 @@ const Header = () => {
                             )}
 
                             {
-                                user &&
+                                user ?
                                 <div className="relative flex justify-center items-center group w-[50px] sm:w-[70px] h-[70px]">
 
                                     {
@@ -327,7 +328,12 @@ const Header = () => {
                                             </ul>
                                         </div>
                                     }
+                                    
                                 </div>
+                                :
+                                <FaUserCircle className='text-4xl text-white' />
+
+                                
                             }
 
                             {/* ....... */}

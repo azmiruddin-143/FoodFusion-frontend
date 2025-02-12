@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { IoEyeOff, IoEye } from "react-icons/io5";
-import googleImage from "../../src/assets/google-icon.png"
+import googleImage from "../../src/assets/google-icon.png";
+import loginImage from "../../src/assets/Login-rafiki.png";
 import 'react-toastify/dist/ReactToastify.css';
 import { toast } from 'react-toastify';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -10,11 +11,10 @@ import { Fade } from 'react-awesome-reveal';
 import { FaLeftLong } from 'react-icons/fa6';
 
 const Login = () => {
-
-    const { loginUser, googleRegister, setuser, userLogout, user } = useContext(AuthContext)
-    const location = useLocation()
-    const navigate = useNavigate()
-    const [show, setHide] = useState(false)
+    const { loginUser, googleRegister, setuser, userLogout, user } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const [show, setHide] = useState(false);
 
     const userLogoutHandler = () => {
         userLogout()
@@ -23,131 +23,131 @@ const Login = () => {
                 navigate("/");
             })
             .catch((error) => {
-                toast.error(`login failed: ${error.message}`, {
-                    autoClose: 3000,
-                });
+                toast.error(`Login failed: ${error.message}`, { autoClose: 3000 });
             });
-
     };
 
     const eyeIconHandler = () => {
-        setHide(!show)
-    }
-    const loginForm = (event) => {
-        event.preventDefault()
-        const email = event.target.email.value
-        const password = event.target.password.value
-        const trams = event.target.trams.checked
-        // register setup ///
-        if (!trams) {
-            toast.error("terms not checked ", {
-                autoClose: 3000,
+        setHide(!show);
+    };
 
-            });
-            return
+    const loginForm = (event) => {
+        event.preventDefault();
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        const terms = event.target.terms.checked;
+
+        if (!terms) {
+            toast.error("Terms not checked", { autoClose: 3000 });
+            return;
         }
 
         loginUser(email, password)
             .then((result) => {
-                const user = result.user
-                setuser(user);
-                toast.success("Login successful!", {
-                    autoClose: 3000,
-                });
-
-                navigate(location?.state ? location.state : "/")
+                setuser(result.user);
+                toast.success("Login successful!", { autoClose: 3000 });
+                navigate(location?.state ? location.state : "/");
                 event.target.reset();
             })
-
             .catch((error) => {
-                toast.error(`login failed: ${error.message}`, {
-                    autoClose: 3000,
-                });
-            })
-    }
-
+                toast.error(`Login failed: ${error.message}`, { autoClose: 3000 });
+            });
+    };
 
     const googleLoginHandler = () => {
         googleRegister()
             .then((result) => {
                 setuser(result.user);
-                toast.success("Login successful!", {
-                    autoClose: 3000,
-                });
-                navigate(location?.state ? location.state : "/")
+                toast.success("Login successful!", { autoClose: 3000 });
+                navigate(location?.state ? location.state : "/");
             })
             .catch((error) => {
-                toast.error(`login failed: ${error.message}`, {
-                    autoClose: 3000,
-                });
-            })
-    }
-
+                toast.error(`Login failed: ${error.message}`, { autoClose: 3000 });
+            });
+    };
 
     return (
-        <Fade duration={3000} triggerOnce >
-
-            <div>
-
+        <Fade duration={3000} triggerOnce>
+            <div className="min-h-screen flex items-center justify-center bg-gray-100">
                 <Helmet>
-                    <title>FoodFusion| Login </title>
+                    <title>FoodFusion | Login</title>
                 </Helmet>
-                <div className="sm:mt-20 xl:mt-24 2xl:mt-40 my-5 ">
-                    <Link to={'/'} ><button className='text-lg flex items-center gap-4 py-2 px-4 bg-primary-content rounded-md mx-auto text-white'> <FaLeftLong></FaLeftLong>  Home Page</button></Link>
-                    <div className="hero-content flex-col mx-auto lg:flex-row-reverse">
-                        <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl">
-                            <form onSubmit={loginForm} className="card-body">
 
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Email</span>
-                                    </label>
-                                    <input type="email" name='email' placeholder="Enter your name email" className="input input-bordered" required />
+                {/* Main Container with no gap between children */}
+                <div className="flex flex-col md:flex-row w-full max-w-5xl gap-0">
+                    {/* Left Side - Image */}
+                    <div className="hidden md:flex md:w-1/2 items-center justify-center">
+                        <img
+                            className="w-full h-full object-cover"
+                            src={loginImage}
+                            alt="Login Illustration"
+                        />
+                    </div>
+
+                    {/* Right Side - Form */}
+                    <div className="flex flex-col md:w-1/2 items-center justify-center">
+                        <Link to="/">
+                            <button className="text-lg flex items-center gap-2 py-2 px-4 bg-primary-content rounded-md text-white mb-5">
+                                <FaLeftLong /> Home Page
+                            </button>
+                        </Link>
+                        <div className="bg-white p-8 shadow-lg rounded-lg w-full max-w-md">
+                            <form onSubmit={loginForm}>
+                                <div className="mb-4">
+                                    <label className="block text-gray-700">Email</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="Enter your email"
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                                        required
+                                    />
                                 </div>
-                                <div className="form-control relative">
-                                    <label className="label">
-                                        <span className="label-text">Password</span>
-                                    </label>
-                                    <input type={`${show ? "text" : "password"}`} name='password' placeholder=" Enter your name password" className="input input-bordered" required />
-                                    <label className="label">
 
-                                        {
-                                            user ? <Link onClick={userLogoutHandler} className="label-text-alt link link-hover">Forgot password?</Link>
-                                                : <Link to="/forgetpassword" className="label-text-alt link link-hover">Forgot password?</Link>
-                                        }
-
-                                    </label>
-
-                                    <div onClick={eyeIconHandler}>
-                                        {
-                                            !show ? <IoEyeOff className='absolute right-6 top-[50px]' size={20} /> :
-                                                <IoEye className='absolute right-6 top-[50px]' size={20} />
-                                        }
-
+                                <div className="mb-4 relative">
+                                    <label className="block text-gray-700">Password</label>
+                                    <input
+                                        type={show ? "text" : "password"}
+                                        name="password"
+                                        placeholder="Enter your password"
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                                        required
+                                    />
+                                    <div onClick={eyeIconHandler} className="absolute top-10 right-4 cursor-pointer">
+                                        {show ? <IoEye size={20} /> : <IoEyeOff size={20} />}
                                     </div>
-                                    <div className="form-control mt-3">
-                                        <label className="cursor-pointer justify-start gap-4 label">
-                                            <input type="checkbox" name='trams' className="checkbox checkbox-secondary" />
-                                            <span className="label-text">Remember me</span>
-
-                                        </label>
-                                    </div>
-
-
-
-                                </div>
-                                <div className="form-control mt-6">
-                                    <button className="btn bg-primary-content hover:bg-primary-content text-primary">Login</button>
                                 </div>
 
-                                <div className="divider">OR</div>
-                                <div onClick={googleLoginHandler} className='mx-auto'>
-                                    <img className='w-[30px]' src={googleImage} alt="" />
+                                <div className="flex items-center mb-4">
+                                    <input type="checkbox" name="terms" className="mr-2" />
+                                    <span className="text-gray-600">Remember me</span>
                                 </div>
-                                <h1 className='text-lg text-center'>Need an account ? <Link to="/register" className='text-[#e09d15]'>Register</Link></h1>
+
+                                <button className="w-full bg-primary-content text-white py-2 rounded-lg hover:bg-primary">
+                                    Login
+                                </button>
+
+                                <div className="text-center my-4 text-gray-600">OR</div>
+
+                                <div
+                                    onClick={googleLoginHandler}
+                                    className="flex items-center justify-center gap-3 border py-2 px-4 rounded-lg cursor-pointer hover:bg-gray-100"
+                                >
+                                    <img className="w-[30px]" src={googleImage} alt="Google Icon" />
+                                    <span>Sign in with Google</span>
+                                </div>
+
+                                <p className="text-center mt-4 text-gray-600">
+                                    Need an account?{" "}
+                                    <Link to="/register" className="text-[#e09d15]">
+                                        Register
+                                    </Link>
+                                </p>
                             </form>
                         </div>
                     </div>
+
+                    
                 </div>
             </div>
         </Fade>
