@@ -89,7 +89,7 @@ const AddFoods = () => {
                 </div>
             </div>
 
-            <form onSubmit={addFoodsForm} className='max-w-4xl px-4 lg:px-0 mx-auto sm:my-20 my-7' action="">
+            <form onSubmit={addFoodsForm} className='max-w-4xl px-4 lg:px-0 mx-auto sm:my-8 my-7' action="">
                 <div className=' sm:flex gap-5'>
                     <div className="form-control w-full">
 
@@ -177,7 +177,7 @@ const AddFoods = () => {
                         placeholder="ingredients, making procedure, etc. "
                         name='description'
                         rows="1"
-                        className="w-full py-2 px-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full py-2 px-4 border border-black rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                     ></textarea>
                 </div>
 

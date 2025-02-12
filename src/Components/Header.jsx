@@ -298,7 +298,7 @@ const Header = () => {
                                                     to="/myfoods"
                                                     className={({ isActive }) =>
                                                         isActive
-                                                            ? `${isBlurred ? "text-secondary font-bold border-b" : "text-secondary"}`
+                                                            ? `${isBlurred ? "text-secondary font-bold border-b" : " font-bold border-b text-secondary"}`
                                                             : ""
                                                     }
                                                 >
@@ -308,7 +308,7 @@ const Header = () => {
                                                     to="/addfood"
                                                     className={({ isActive }) =>
                                                         isActive
-                                                            ? `${isBlurred ? "text-secondary font-bold " : "text-secondary font-bold "}`
+                                                            ? `${isBlurred ? "text-secondary font-bold " : "text-secondary border-b font-bold "}`
                                                             : ""
                                                     }
                                                 >
@@ -318,7 +318,7 @@ const Header = () => {
                                                     to="/myorders"
                                                     className={({ isActive }) =>
                                                         isActive
-                                                            ? `${isBlurred ? "text-secondary font-bold" : "text-secondary"}`
+                                                            ? `${isBlurred ? "text-secondary font-bold" : "text-secondary border-b font-bold"}`
                                                             : ""
                                                     }
                                                 >

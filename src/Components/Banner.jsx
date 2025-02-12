@@ -56,7 +56,7 @@ const Banner = () => {
                             </p>
                             <Slide direction="up" duration={2000} triggerOnce>
                                 <Link to={"/allfoods"} className="border-b border-secondary py-4">
-                                    <button className="bg-secondary text-black text-sm sm:text-md lg:text-xl font-bold py-1 px-4 sm:py-2 sm:px-6 sm:mt-6 mt-4 ">Purchase menu</button>
+                                    <button className="bg-secondary rounded-md text-black text-sm sm:text-md lg:text-xl font-bold py-1 px-4 sm:py-2 sm:px-6 sm:mt-6 mt-4 ">Purchase menu</button>
                                 </Link>
                             </Slide>
                         </div>
@@ -85,7 +85,7 @@ const Banner = () => {
                             </p>
                             <Slide direction="up" duration={2000} triggerOnce>
                                 <Link to={"/allfoods"} className="border-b border-secondary py-4">
-                                    <button className="bg-secondary text-black text-sm sm:text-md lg:text-xl font-bold py-1 px-4 sm:py-2 sm:px-6 sm:mt-6 mt-4 ">Purchase menu</button>
+                                    <button className="bg-secondary rounded-md text-black text-sm sm:text-md lg:text-xl font-bold py-1 px-4 sm:py-2 sm:px-6 sm:mt-6 mt-4 ">Purchase menu</button>
                                 </Link>
                             </Slide>
                         </div>
@@ -110,7 +110,7 @@ const Banner = () => {
                             </p>
                             <Slide direction="up" duration={2000} triggerOnce>
                                 <Link to={"/allfoods"} className="border-b border-secondary py-4">
-                                    <button className="bg-secondary text-black text-sm sm:text-md lg:text-xl font-bold py-1 px-4 sm:py-2 sm:px-6 sm:mt-6 mt-4 ">Purchase menu</button>
+                                    <button className="bg-secondary rounded-md text-black text-sm sm:text-md lg:text-xl font-bold py-1 px-4 sm:py-2 sm:px-6 sm:mt-6 mt-4 ">Purchase menu</button>
                                 </Link>
                             </Slide>
                         </div>
