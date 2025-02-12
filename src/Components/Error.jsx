@@ -1,17 +1,33 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { FiHelpCircle } from "react-icons/fi";
+import { AiOutlineHome } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Error = () => {
-    return (
-        <div>
-            <Helmet>
-                <title>FoodFusion | Error</title>
-            </Helmet>
-            <div>
-                <h1 className='text-red-700 text-xl  sm:text-2xl md:text-4xl'>404 Not found page</h1>
-            </div>
+  return (
+    <div className="flex items-center justify-center h-screen bg-black text-white">
+      <Helmet>
+        <title>FoodFusion | Error Page </title>
+      </Helmet>
+      <div className="text-center px-6">
+        <div className="text-6xl font-bold mb-6">404 ?</div>
+        <h1 className="text-3xl font-semibold mb-4">Something's wrong here...</h1>
+        <p className="text-lg text-gray-300 mb-6">
+          We can't find the page you're looking for. Check out our Help Center or
+          head back to home.
+        </p>
+        <div className="flex justify-center gap-4">
+          <Link to={'/contactus'}><button className="flex items-center bg-white text-blue-900 px-4 py-2 rounded-md font-semibold hover:bg-gray-200">
+            <FiHelpCircle className="mr-2" /> Help
+          </button></Link>
+          <Link to={'/'}><button className="flex items-center bg-[#cbbe7dd6] text-black px-4 py-2 rounded-md font-semibold ">
+            <AiOutlineHome className="mr-2 text-black" /> Home
+          </button></Link>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Error;
