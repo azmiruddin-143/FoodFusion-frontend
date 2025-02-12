@@ -52,7 +52,7 @@ const SingleFood = () => {
                     </div>
                 </div>
 
-                <div>
+                <div className='h-screen'>
                     <form onSubmit={chek} action="">
                         <div className='my-10 mx-2 sm:mx-0'>
                             <div class="max-w-4xl mx-auto my-5 p-4 bg-white border rounded-lg shadow-md flex flex-col md:flex-row gap-5">
